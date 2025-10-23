@@ -28,7 +28,57 @@ nav{
     gap: 30px;
 }
 nav a{
-    color: #e5e7e5;
+    color: #E5E7EB;
     text-decoration: none;
     font-size: 18px;
+}
+
+/* Hero Section */
+.hero{
+    background-color:#1F2937;
+    color:#F9FAF8;
+    padding: 100px 200px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+}
+
+.hero-content{
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #E5E7EB;
+    margin-bottom: 20px;
+}
+
+.hero-image{
+    flex: 1;
+    background-color: #6d7a86;
+
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F9FAF8;
+
+}
+
+button{
+    background-color: #3882F6;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor:pointer;
 }
