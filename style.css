@@ -271,3 +271,44 @@ transform:translateY(-10px);
     color: #3882F6;
     transform: translateY(-3px);
 }
+
+/* Projects Page */
+.project {
+    background-color: #F9FAF8;
+    border: 2px solid #E5E7EB;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.project h2 {
+    font-size: 28px;
+    color: #1F2937;
+    margin-bottom: 15px;
+}
+
+.project p {
+    font-size: 18px;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+}
+
+.project-links a {
+    background-color: #3882F6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
