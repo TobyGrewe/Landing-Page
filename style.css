@@ -117,7 +117,7 @@ button:hover{
     background-color: #2563EB;
     transform: scale(1.05);
 }
-/* Informaiton Section */
+/* Information Section */
 .information{
     padding: 80px 200px;
     text-align:center;
@@ -242,7 +242,7 @@ button:hover{
 
 .page-content h1{
     font-size: 48px;
-    font-weight; 900;
+    font-weight: 900;
     color:#1F2937;
     margin-bottom: 30px;
 }
@@ -377,3 +377,192 @@ button:hover{
     color: #2563eb;
     text-decoration: underline;
 }
+
+
+
+/* ============================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ============================================ */
+
+/* Tablet (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    .hero {
+        padding: 80px 50px;
+    }
+
+    .information {
+        padding: 60px 50px;
+    }
+
+    .quote {
+        padding: 80px 50px;
+    }
+
+    .cta {
+        padding: 60px 50px;
+    }
+
+    .page-content {
+        padding: 80px 50px;
+    }
+}
+
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+    /* Header - Stack navigation */
+    header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Hero Section - Stack vertically */
+    .hero {
+        padding: 60px 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Information/Skills Section - Stack cards */
+    .information {
+        padding: 60px 20px;
+    }
+
+    .information h2 {
+        font-size: 28px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    /* Quote Section */
+    .quote {
+        padding: 60px 20px;
+    }
+
+    .quote p {
+        font-size: 24px;
+    }
+
+    .quote-author {
+        font-size: 20px;
+    }
+
+    /* Call to Action */
+    .cta {
+        padding: 60px 20px;
+    }
+
+    .cta-box {
+        padding: 30px 20px;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .cta-text h3 {
+        font-size: 20px;
+    }
+
+    .cta-text p {
+        font-size: 16px;
+    }
+
+    /* Page Content (About/Projects pages) */
+    .page-content {
+        padding: 60px 20px;
+    }
+
+    .page-content h1 {
+        font-size: 36px;
+    }
+
+    .page-content h2 {
+        font-size: 24px;
+    }
+
+    .page-content p,
+    .page-content ul,
+    .page-content li {
+        font-size: 16px;
+    }
+
+    /* Project Cards - Better mobile layout */
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 20px;
+    }
+
+    .social-links {
+        gap: 30px;
+    }
+}
+
+/* Very small phones (up to 374px) */
+@media screen and (max-width: 374px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .information h2 {
+        font-size: 24px;
+    }
+
+    .quote p {
+        font-size: 20px;
+    }
+}
+
