@@ -116,3 +116,24 @@ button{
     color:#1F2937;
     font-size: 18px;
 }
+
+.qoute{
+    background-color: #E5E7EB;
+    padding: 100px 200px;
+}
+
+.qoute p{
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.qoute-author{
+    text-align: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1F2937;
+    
+}
