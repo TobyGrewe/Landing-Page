@@ -135,5 +135,36 @@ button{
     font-size: 24px;
     font-weight: bold;
     color: #1F2937;
-    
+
+}
+
+/* Call to Action */
+.cta {
+    padding: 80px 200px;
+}
+
+.cta-box {
+    background-color: #3882F6;
+    color: white;
+    padding: 50px 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.cta-button {
+    border: 2px solid white;
+    background-color: #3882F6;
 }
