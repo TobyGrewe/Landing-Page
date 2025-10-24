@@ -5,6 +5,11 @@
     box-sizing: border-box;
 
 }
+
+
+html{
+    scroll-behavior:smooth;
+}
 body{
     font-family: 'Roboto', sans-serif;
   
@@ -213,4 +218,38 @@ transform:translateY(-10px);
 .cta-button:hover{
     background-color:white;
     color:#3882f6
+}
+
+
+/* Page content (for about and services pages) */
+
+.page-content{
+    padding: 100px 200px;
+    min-height: 60vh;
+}
+
+
+.page-content h1{
+    font-size: 48px;
+    font-weight; 900;
+    color:#1F2937;
+    margin-bottom: 30px;
+}
+
+.page-content p{
+    font-size: 18px;
+    color:#1F2937;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.page-content ul{
+    font-size: 18px;
+    color:#1F2937;
+    margin-left: 40px;
+    margin-bottom:20px;
+
+}
+
+.page-content li{
+    margin-bottom:10px;
 }
