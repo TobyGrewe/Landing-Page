@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building My First Portfolio Website - Toby Grewe</title>
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <header>
+        <div class="logo">Toby Grewe</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <article class="blog-post" id="main-content">
+        <div class="post-header">
+            <a href="blog.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Blog
+            </a>
+            <div class="post-meta">
+                <span class="post-date"><i class="far fa-calendar"></i> January 15, 2025</span>
+                <span class="post-category">Web Development</span>
+                <span class="read-time"><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h1>Building My First Portfolio Website</h1>
+            <p class="post-subtitle">A reflection on the process of creating this portfolio from scratch, the challenges I faced, and what I learned along the way.</p>
+        </div>
+
+        <div class="post-featured-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <div class="post-content">
+            <h2>The Beginning</h2>
+            <p>When I first decided to build a portfolio website, I was both excited and intimidated. I had learned the basics of HTML and CSS through The Odin Project, but creating something from scratch that would represent my skills and personality felt like a huge undertaking.</p>
+            
+            <p>I started with a simple wireframe—just boxes and text on paper. It wasn't fancy, but it helped me visualize what I wanted to build. The challenge was turning that basic sketch into a real, functioning website.</p>
+
+            <h2>The Challenges</h2>
+            <p>The first major challenge was layout. I knew I wanted a clean, modern design, but making everything align properly with flexbox took some trial and error. There were moments where I'd change one thing and three other things would break. That's when I really learned the importance of understanding CSS specificity and the cascade.</p>
+
+            <div class="post-callout">
+                <i class="fas fa-lightbulb"></i>
+                <p><strong>Key Learning:</strong> Don't be afraid to break things. Every bug is a learning opportunity, and fixing them makes you a better developer.</p>
+            </div>
+
+            <p>Another challenge was making the site responsive. What looked great on my desktop monitor looked terrible on mobile. I spent hours tweaking media queries, adjusting padding, and reorganizing layouts. But seeing it finally work across all devices was incredibly satisfying.</p>
+
+            <h2>What I Learned</h2>
+            <p>Building this portfolio taught me so much more than any tutorial ever could:</p>
+
+            <ul>
+                <li><strong>Planning is crucial:</strong> Taking time to wireframe and plan saves hours of coding</li>
+                <li><strong>Git is your friend:</strong> Committing often meant I could experiment without fear</li>
+                <li><strong>Responsive design is hard but necessary:</strong> Most visitors will be on mobile</li>
+                <li><strong>Details matter:</strong> Small touches like hover effects make a big difference</li>
+                <li><strong>Asking for help is okay:</strong> The dev community is incredibly supportive</li>
+            </ul>
+
+            <h2>The Features</h2>
+            <p>As I built the site, I kept adding features. Each one was a mini-project that taught me something new:</p>
+
+            <h3>Dark Mode</h3>
+            <p>Implementing dark mode taught me about CSS variables, localStorage, and JavaScript event listeners. It was challenging to make sure every element looked good in both themes, but it was worth it.</p>
+
+            <h3>Smooth Animations</h3>
+            <p>Adding subtle animations brought the site to life. I learned about CSS transitions, transforms, and keyframe animations. The trick was making them smooth but not distracting.</p>
+
+            <h3>Blog Section</h3>
+            <p>Creating this blog was meta—writing about building the site while building the site. It forced me to think about content structure, typography, and readability.</p>
+
+            <div class="post-quote">
+                <i class="fas fa-quote-left"></i>
+                <blockquote>
+                    "The best way to learn web development is to build something real. Tutorials are great, but nothing beats the experience of solving problems on your own project."
+                </blockquote>
+            </div>
+
+            <h2>What's Next?</h2>
+            <p>This portfolio is never truly "done." I'm already thinking about improvements:</p>
+
+            <ul>
+                <li>Adding more projects as I build them</li>
+                <li>Implementing a contact form</li>
+                <li>Optimizing performance even further</li>
+                <li>Writing more blog posts (like this one!)</li>
+                <li>Adding interactive demos of my code</li>
+            </ul>
+
+            <h2>Final Thoughts</h2>
+            <p>If you're thinking about building a portfolio, just start. It doesn't have to be perfect—mine certainly isn't. But it's mine, and I built it from scratch. That's something to be proud of.</p>
+
+            <p>Every line of code taught me something. Every bug I fixed made me better. Every feature I added expanded my skills. That's the real value of a project like this.</p>
+
+            <p>So don't wait. Open your code editor, create that index.html file, and start building. You'll be amazed at what you can create.</p>
+        </div>
+
+        <div class="post-footer">
+            <div class="post-tags">
+                <span class="post-tag"><i class="fas fa-tag"></i> Web Development</span>
+                <span class="post-tag"><i class="fas fa-tag"></i> Portfolio</span>
+                <span class="post-tag"><i class="fas fa-tag"></i> Learning</span>
+                <span class="post-tag"><i class="fas fa-tag"></i> HTML</span>
+                <span class="post-tag"><i class="fas fa-tag"></i> CSS</span>
+            </div>
+
+            <div class="post-share">
+                <h3>Share this post</h3>
+                <div class="share-buttons">
+                    <a href="#" class="share-btn twitter" aria-label="Share on Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="share-btn linkedin" aria-label="Share on LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="share-btn facebook" aria-label="Share on Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="post-navigation">
+                <a href="blog.html" class="nav-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Posts
+                </a>
+                <a href="blog-post-2.html" class="nav-btn">
+                    Next Post <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <p>Copyright © Toby Grewe 2025</p>
+        <div class="social-links">
+            <a href="https://github.com/TobyGrewe" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com/in/tobygrewe" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="back-to-top.js"></script>
+</body>
+</html>
