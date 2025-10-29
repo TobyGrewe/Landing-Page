@@ -38,6 +38,17 @@ body {
   top: 0;
 }
 
+
+
+
+/* Hide scrollbars for a cleaner look */
+html {
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+}
+
+
+
 /* ============================================
    KEYFRAME ANIMATIONS
    ============================================ */
