@@ -2040,3 +2040,14 @@ font-style:italic ;
       place-items: center;
       height: 3vh; 
 }
+
+
+
+/* Image sharpness zoom */
+.project-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+     zoom: 113%
+}
