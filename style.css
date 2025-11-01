@@ -166,6 +166,14 @@ header {
   font-weight: bold;
   transition: transform 0.3s ease, color 0.3s ease;
   animation: none;
+  
+  
+}
+.logo p{
+  background-image: linear-gradient(to right, #a97bca, #b3b3d6); /* Your desired gradient */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  background-clip: text;
+  color: transparent; /* Make the text transparent to reveal the background */
 }
 
 .logo:hover {
@@ -2001,4 +2009,13 @@ textarea:focus {
 p,
 li {
   max-width: 75ch;
+}
+
+.copyright {
+font-style:italic ;
+ width: 50%;
+ margin: 0 auto;
+ display: grid;
+      place-items: center;
+      height: 3vh; 
 }
