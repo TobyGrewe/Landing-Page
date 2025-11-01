@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toby Grewe - Creative Writing Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e4e4e4;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #f0f0f0;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-style: italic;
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #c0c0c0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .writings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .writing-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .writing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e94560, #0f3460);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .writing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.3);
+            border-color: rgba(233, 69, 96, 0.5);
+        }
+
+        .writing-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .writing-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #f0a500;
+            font-weight: 400;
+        }
+
+        .writing-card .category {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            color: #e94560;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .writing-card p {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .writing-card .excerpt {
+            font-style: italic;
+            color: #909090;
+            border-left: 3px solid #e94560;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2rem;
+            color: #e94560;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.2s;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        .modal-content h2 {
+            color: #f0a500;
+            margin-bottom: 1.5rem;
+            font-size: 2.2rem;
+        }
+
+        .modal-content .full-text {
+            color: #d0d0d0;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            font-size: 1.05rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .writings-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                margin: 1rem;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TOBY GREWE</h1>
+        <p class="tagline">Essays & Creative Writing</p>
+        
+    
+        <div class="logo"><p></p></div>
+       <nav>
+    <a href="index.html">Home</a>
+   
+    
+</nav>
+       
+    </header>
+
+
+    <div class="container">
+        <div class="intro">
+            <p>A collection of essays exploring geography, culture, art, and music through thoughtful analysis and creative expression.</p>
+        </div>
+
+        <div class="writings-grid">
+            <div class="writing-card" onclick="openModal('nicaragua')">
+                <h2>Nicaragua's Revolution</h2>
+                <span class="category">Political Geography</span>
+                <p>An exploration of Nicaragua's turbulent political climate, natural disasters, and the resulting migration crisis under Daniel Ortega's authoritarian rule.</p>
+                <div class="excerpt">"An equally devastating disaster lies in the political system of Nicaragua, a system with a violent political climate of oppression, war, and corruption."</div>
+            </div>
+
+            <div class="writing-card" onclick="openModal('parks')">
+                <h2>Parks and Recreation</h2>
+                <span class="category">Urban Planning</span>
+                <p>A thoughtful examination of public parks' role in community well-being, environmental sustainability, and the critical importance of equitable access.</p>
+                <div class="excerpt">"Parks offer a third place for people to interact with one another, away from work, school, and home."</div>
+            </div>
+
+            <div class="writing-card" onclick="openModal('burden')">
+                <h2>The Burden to Bear</h2>
+                <span class="category">Literature & Art</span>
+                <p>A comparative analysis of Naguib Mahfouz's "Palace Walk" and Timothy O'Sullivan's "A Harvest of Death," exploring themes of destiny, freedom, and the human condition.</p>
+                <div class="excerpt">"The destiny of life and death are the same in the end. The way we live is by the same means in which we die."</div>
+            </div>
+
+            <div class="writing-card" onclick="openModal('deerly')">
+                <h2>Dearly Beloved</h2>
+                <span class="category">Art Analysis</span>
+                <p>An intimate examination of Frida Kahlo's "The Wounded Deer," exploring themes of pain, identity, and cultural fusion through the lens of the iconic artist's life.</p>
+                <div class="excerpt">"Her soul is the canvas, and her life is the colors."</div>
+            </div>
+
+            <div class="writing-card" onclick="openModal('mud')">
+                <h2>It's the Mud</h2>
+                <span class="category">Music & Culture</span>
+                <p>A journey through the emergence of Bossa Nova in 1950s Brazil, tracing its African roots, cultural significance, and the story behind "Águas de Março."</p>
+                <div class="excerpt">"Though it may be miserable during this period of terrible rainfall, the rain washes more than mud; it cleanses people of their sorrows."</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Toby Grewe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const writings = {
+            nicaragua: {
+                title: "Nicaragua's Revolution",
+                content: `D199 Task 1 -- Toby Grewe
+
+Nicaragua is in Central America; to the north lies Honduras, and the south is Costa Rica. Nicaragua has extensive coastlines to the east and west; these coastlines give way to the Pacific and Caribbean Seas, respectively. Despite being a smaller, developing country, Nicaragua suffers from extreme, volatile weather patterns. Volcanic, seismic, and tropical natural disasters plague the environment and its inhabitants. An equally devastating disaster lies in the political system of Nicaragua, A system with a violent political climate of oppression, war, and corruption.
+
+The unique environment of Nicaragua leads to several natural hazards. "Nicaragua experiences a tropical rainforest climate in the east, a tropical monsoon climate in the central regions, and a tropical savanna climate in the west of the country (Othering & Belonging Institute). This diversity of climate, while possibly an asset, given the turbulent nature of Nicaragua's government, has become a catastrophizing ingredient in this Central American country. Environmental risks mainly include hurricanes and floods. According to the Global Climate Risk Index (2021), Nicaragua ranks 49th out of 180 Countries, making it highly vulnerable to climate disasters.
+
+While many countries are home to natural disasters, including many developed countries such as Japan and the United States, the lack of coordination, influx of instability, and ever-present corruption breed terrible conditions for organizing relief efforts and governance of the distribution of gathered funds and resources. "The Nicaraguan government has completed permanent housing for 103 families squatting in the ruins of four abandoned high-rises in Managua since the 1972 earthquake." (Christian Science Monitor) This delay indicates how long a response may take to return to a pre-disaster baseline. The larger the disaster, the more involvement from the government is required. Given the turbulent nature of its climate, Nicaragua requires a stable and robust government, one of which is not currently present due to the current president's and his party's authoritative rule.
+
+In 1979 (Martin), the Sandinista Revolution laid the groundwork for the current state of Nicaraguan. This revolution led to the overthrow of the United States' backed dictatorship during the 80s. As a result of this conflict, a civil war between those who opposed United States involvement and U.S.-backed support of the Contras. Daniel Ortega is the current ruling authority in Nicaragua. He has seized control of the police and military to embolden his reign and destroy dissenting perspectives. Furthermore, Ortega has changed the Constitution to allow for his perpetual rule of Nicaragua.
+
+In 2018, three hundred and twenty protesters were killed by order of Daniel Ortega, leaving many more wounded. The incarceration of journalists and opposing political, social, and religious leaders also occurred. In a bid to control the narrative, Daniel Ortega's rule was total and unconcerned with legal ramifications both nationally and internationally.
+
+Due to Nicaragua's extreme political and environmental factors, many have migrated to better their and their family's lives. According to Figure 4 of the case study, the number of refugees and asylum-seekers has increased exponentially from 2017 -- 2022. According to "Social inequality, political conflicts, and environmental disasters, such as earthquakes, volcanic eruptions, and climate risks, have been the main drives of emigration," the Nicaraguan government cannot stabilize the natural or political crisis. As a result, many have no other option but to flee the country.`
+            },
+            parks: {
+                title: "Parks and Recreation",
+                content: `Parks and Recreation
+
+Creating and integrating parks in communities is a simple yet effective way of increasing the value of a neighborhood and the well-being of its residents, as well as counteracting the adverse effects of modern city sprawl. Parks offer a third place for people to interact with one another, away from work, school, and home. On top of parks being a logistical benefit in a multitude of different arenas, they also simply are breath-giving and allow people to connect back to their roots, time to decompress, and time to find liberation in the Impermanence of daily life. This essay will touch on the benefits and disadvantages of public parks and attempt to convey the importance of such consideration to citizens, governing bodies, and city planners to give the proper information and context for the public to form and conclude their thoughts and opinions. Public parks can be essential in promoting community well-being, environmental protection, and habitat, with equity and proper planning in mind.
+
+According to the National Recreation and Park Association, three central values make parks essential to communities (National Recreation and Park Association,2010): economic value, health and environmental benefits, and social importance. Parks increase property values; the closer private property is to a park, the higher this increase is. Trees in American cities are responsible for a four-hundred billion dollar saving potential in offsetting stormwater retention facility costs (National Recreation and Park Association,2010). Cities can utilize parks within their planning to manage storm waters and minimize flooding, which is sustainable and scalable. The most resilient cities are keen on utilization of this asset (City Parks Alliance, n,d).
+
+Aside from the benefits regarding the environment, public parks aid in their facilitation of community engagement. For example, in New York City's Central Park, residents utilize the space for group activities, fitness regimens, and even playing chess. Trees are an aesthetic contrast to the concrete jungle and clean the air, thus improving residents' health. "Trees in urban parks remove up to 711,000 tons of toxins from the air annually at a value of $3.8 billion to cities." (City Parks Alliance, n,d). As parks elevate individuals' health, they attract people to be healthy and interact in their communities. Public parks are third in which humans may interact with one another and engage in sports and outdoor activities such as biking or fishing. However, not all parks are equal.
+
+"It is difficult to design a space that will not attract people - what is remarkable is how often this has been accomplished" (Project for Public Spaces, 2009). These are the words of American urbanist William H. Whyte. It reflects on the issues of mismanagement and accessibility of public parks. After all, what good is a park if no one utilizes it, and what good is a public space for the few and well-endowed? Lack of seating, gathering points, and ill-planned transit routes are a few reasons why planning is so important. An individual may look at the issues that plague many public parks as a reason to downsize or diminish the availability of access to the public. Alas, the problem lies in managing and planning public parks, not in incorporating them.`
+            },
+            burden: {
+                title: "The Burden to Bear",
+                content: `The Burden to Bear
+
+Naguib Mahfouz (Cairo, 1911--2006) was an Egyptian author, playwright, and Nobel Prize laureate. His work illustrates the complexity of human relationships, thoughts on destiny, and reflections on social contracts (Library of Congress). In the passage "Excerpt from Palace Walk" (Penguin Random House), Mahfouz illustrates the fictitious life of an Egyptian woman. In this tale, we first learn of a wife's daily routine and the gravity of her husband's authority. "Habit woke her at this hour. It was an old habit she had developed when young, and it had stayed with her as she matured." The predetermined nature of the woman's life is lamented in this quote. Destiny is the glue that ties her soul to this plane of the living. However, there is already an inception of thought that this arrangement is not without compromises.
+
+Mahfouz emphasizes the helplessness and isolation of the wife's current circumstances. Whisked away to a marriage at the age of fourteen, she knows she has little choice in a world built by and for men. Using the house's mashrabiya (Abiya), the isolated wife can glimpse the world around her, yet the wife feels isolated. Only through the text of the Qur'an does she come to a catharsis of her experience. "Socially, the role of the mashrabiya evolved into a product for gender segregation, home seclusion, and a veiling norm regulator. Nevertheless, it also mediates the architecture and interior experiences, allowing female occupants to observe exterior life without being observed themselves" (Abiya,2024). This motif of predetermination is ever-present in this text. Mahfouz brings to attention the archaic societal code of the Egyptian and larger Arab world, in which adherence to doctrine is paramount.
+
+"When it comes to our habits, we are completely enslaved" (The Tibetan Book of Living and Dying). The picture entitled A Harvest of Death is a bleak yet poignant reminder of the horrors of war. In the image's foreground is a field of lifeless soldiers, with the living in the background. A Harvest of Death is attributed to Timothy H. O'Sullivan and Alexander Gardner. Due to the primitive capabilities of photography, the framing of the composition, and the destructive nature of the Battle of Gettysburg, no soldier can easily be identified. In a sea of suffering, a million drown.
+
+Nothing is ever promised tomorrow, yet we must act as though we will continue in the morning---foolishly or due to our insatiable aversion to impermanence. Life flows like a stream through a field, unknowingly awaiting a bloodbath at our end. The soldiers of Gettysburg fought for freedom, but thousands (Guelzo, 2013) would never live to enjoy the fruits of their labor.
+
+In closing, both works touch on themes of destiny and freedom---Mahfouz on the fickle nature of an Egyptian wife and O'Sullivan on the merits and shortcomings of war. In many ways, both show the war all humans fight for: the erosion of self we allow through the regression of urges, wants, and desires. The destiny of life and death are the same in the end. The way we live is by the same means in which we die.`
+            },
+            deerly: {
+                title: "Dearly Beloved",
+                content: `Dearly Beloved
+
+"Kahlo's supposed shyness and 'naïve' childlike nature were attributed to both her personality and her artistic style" (Ankori, 2024, p. [13]). Magdalena Frida Carmen Kahlo was born on July 6, 1907, at 8:30 am to Guillermo Kahlo and Matilde Calderon. Like many things about Frida, even her birth date was a mystery. She claimed to be born in 1910, a symbolic connection to the start of the Mexican Revolution. Her lack of conformity permeated her historical record.
+
+"I've concluded that all I've done is fail. I wanted to be a doctor when I was a little girl, and a bus squashed me. I live with you for ten years without doing anything short but causing problems and annoying you. I began to paint, and my painting is useless, but for me and for you to buy it, knowing that no one else will..." A prominent expression of Kahlo's existence would be her lack of self-worth. This absence of self-worth is attributed to the environment in which she was born---as well as her eccentric behaviors and strong convictions. The path of the brave is often lonely, and those who travel upon it may never find an equal. Nevertheless, Kahlo is steadfast in her uniqueness.
+
+In 1925 (Open Culture,2019), Kahlo suffered a nearly fatal injury due to a bus accident. This accident was pivotal in shaping Kahlo's artistic and spiritual life. She began to paint and explore her gift of expression through her extended recovery period. It indeed begs the question, if she did not suffer from this horror, would she ever have become the artist as we know her? Regardless, her life after the accident would be filled with pain, and she could often be found in hospital.
+
+In her self-portrait entitled The Wounded Deer (FridaKahlo.Org n,d), Kahlo superimposes her head on a deer's body in a forest near the sea. Arrows of unknown origin fatally wound her body; however, she retains calmness to herself. As a reminder, Destiny's sales are not refundable. Next to her signature, she inscribed the word "Carma," alluding to her fate. Notably, the deer's body is that of a stag, which creates a sense of dichotomy between her perceived gender and her actual self. "Above all, be at ease, be as natural and spacious as possible. Slip quietly out of the noose of your habitual anxious self, release all grasping, and relax into your true nature" (Rinpoche, Sogyal. The Tibetan Book of Living and Dying.)
+
+Frida Kahlo was not shy or afraid to express her heritage. Due to this nature, she possessed, The Wounded Deer also pays homage to Mexico's pre-Columbian culture. "The pre-Columbian used to produce abstract, composite creatures, half human and animal, to portray the idea of rebirth and continuance of life" (Simplykalaa, 2023). Through her work, Kahlo represents an ancient culture's perspective on life.`
+            },
+            mud: {
+                title: "It's the Mud",
+                content: `It's the Mud
+
+"Brazil's best-known form of music is the samba, the drum-heavy, rhythmically intricate and danceable genre that powers Carnival" (Smithsonian, 2019). Samba developed a "new style" of music called Bossa Nova. During a time of revitalization of Brazilian culture, Bossa Nova was the hallmark of the post-war musical renaissance. The genre was most popular amongst the emerging middle class and the wealthy. Mixing classical Brazilian percussion with qualities Of American pop and Jazz lamented this genre's diverse and sophisticated vibe. Flutes, saxophones, and breathy vocals create a sense of intimacy with its audience. Prominent Bossa Nova Musicians include Antônio Carlos Jobim, João Gilberto, and Vinícius de Morãe.
+
+The genre emerged in Rio de Janeiro in the late 1950s (Transatlantic Cultures,2020). The genre is partly owed to the expansion of musical imports, particularly bolero, mambo, and Jazz. Foreign and local artists would entwine to perform at nightclubs and bars of the era. The influx of foreign artists visiting Brazil through the 50s was fundamental for the emergence of Bossa Nova. Tommy Dorsey, Ella Fitzgerald, Nat King Cole, and Louis Armstrong all toured Brazil in this period, adding to the influx of the country's external "cool jazz" influence.
+
+In the United States, it became popularized by saxophonist Stan Getz and guitarist Charlie Bryd. Bryd heard of the style on a State-Sponsored tour of South America (JSTOR, 2023). Together, they recorded the hit 1962 album Jazz Samba to a warm reception from American jazz aficionados. The apex of the Bossa Nova "craze" coincided with the Americanization of the classic hit "The Girl From Ipanema." Chico Buarque, an internationally acclaimed Brazilian musician, would illustrate the allure of Bossa Nova. "The optimism of the era that Buarque described is evident in the songs' lyrics, which casually describe the musicians' environment: beaches, flowers, blue skies, and beautiful women" (Brown University Library, n.d).
+
+'Águas de Março' was created in May 1972 by Antônio Carlos Jobim and Elis Regina. The song laments the cyclic nature of life, infused with whimsical depictions of day-to-day life in Brazil. "And the riverbank talks of the waters of March, It's the end of the strain, The joy in your heart" (águas de março, n.d). Infamously, Brazil's spring is quite wet; águas de março illustrates the almost comical degree to which it rains in the spring. Jobim wrote this song on a trip to his family's rancho (Connect Brazil, n.d). He was bombarded with steadfast rainstorms, which washed away the roads and left a muddy layer. The hope and promise of a new life vindicate this dilemma. Though it may be miserable during this period of terrible rainfall, the rain washes more than mud; it cleanses people of their sorrows.`
+            }
+        };
+
+        function openModal(id) {
+            const writing = writings[id];
+            const modal = document.getElementById('modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            modalBody.innerHTML = `
+                <h2>${writing.title}</h2>
+                <div class="full-text">${writing.content}</div>
+            `;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

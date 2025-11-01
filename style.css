@@ -159,6 +159,13 @@ header {
   top: 0;
   z-index: 1000;
   animation: fadeIn 0.8s ease-out;
+
+}
+header nav{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .logo {
@@ -185,6 +192,10 @@ header {
 nav {
   display: flex;
   gap: 30px;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 nav a {
@@ -195,6 +206,8 @@ nav a {
   padding-bottom: 5px;
   transition: color 0.3s ease;
   overflow: hidden;
+  margin: 0 auto
+  
 }
 
 nav a::after {
@@ -1113,7 +1126,15 @@ footer {
   padding: 40px;
   border-top: 3px solid #3882f6;
   animation: slideInUp 0.8s ease-out;
+  display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 10px;
 }
+
+
 
 .social-links {
   margin-top: 20px;
@@ -1768,7 +1789,7 @@ body.dark-mode .nav-btn:hover {
     gap: 15px;
     text-align: center;
     flex-wrap: wrap;
-    justify-content: center;
+  
   }
 
   .hero {
