@@ -143,71 +143,56 @@ section {
   overflow-x: hidden;
 }
 
+
 /* ============================================
    HEADER & NAVIGATION
    ============================================ */
 
 header {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  color: #f9faf8;
-  padding: 20px 200px;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
+  border-bottom: 1px solid #e5e7eb;
   z-index: 1000;
-  animation: fadeIn 0.8s ease-out;
-
-}
-header nav{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  transition: transform 0.3s ease, color 0.3s ease;
-  animation: none;
-  
-  
-}
-.logo p{
-  background-image: linear-gradient(to right, #a97bca, #b3b3d6); /* Your desired gradient */
-  -webkit-background-clip: text; /* For WebKit browsers */
-  background-clip: text;
-  color: transparent; /* Make the text transparent to reveal the background */
+  flex-shrink: 0;
 }
 
-.logo:hover {
+.home-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.home-link:hover {
   color: #3882f6;
-  cursor: pointer;
-  animation: logoPulse 1s ease-in-out;
 }
 
 nav {
   display: flex;
-  gap: 30px;
-  place-items: center;
-  justify-content: center;
-  align-items: center;
-  
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  margin-left: auto;
 }
 
 nav a {
-  color: #e5e7eb;
+  color: #000;
   text-decoration: none;
   font-size: 18px;
-  position: relative;
-  padding-bottom: 5px;
   transition: color 0.3s ease;
-  overflow: hidden;
-  margin: 0 auto
-  
+  position: relative;
+  padding: 5px 0;
 }
 
 nav a::after {
@@ -222,15 +207,18 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #3882f6;
+  color: #666;
 }
 
 nav a:hover::after {
   width: 100%;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle Button 
 .theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 40px;
   background: #1f2937;
   border: 2px solid #e5e7eb;
   color: #f9faf8;
@@ -243,6 +231,7 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), -4px -4px 8px rgba(55, 65, 81, 0.3);
+  z-index: 101;
 }
 
 .theme-toggle:hover {
@@ -261,7 +250,6 @@ nav a:hover::after {
 .theme-toggle:hover i {
   transform: rotate(20deg);
 }
-
 /* ============================================
    HERO SECTION
    ============================================ */
@@ -1785,12 +1773,12 @@ body.dark-mode .nav-btn:hover {
   }
 
   nav {
-    flex-direction: row;
-    gap: 15px;
-    text-align: center;
-    flex-wrap: wrap;
-  
-  }
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-left: 0;
+  width: 100%;
+}
 
   .hero {
     padding: 60px 20px;
