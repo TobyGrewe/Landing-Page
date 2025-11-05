@@ -915,15 +915,25 @@ button:active,
   transition: transform 0.5s ease;
 }
 
-.cert-icon i {
+/* .cert-icon i {
   color: white !important;
+} */
+/* CERT IMAGE */
+
+.cert-icon img {
+  width: 105px;       /* */
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
+
 
 .cert-card:hover .cert-icon {
   transform: scale(1.1) rotate(360deg);
 }
 
-.cert-icon.comptia {
+/* .cert-icon.comptia {
   background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
 }
 
@@ -936,8 +946,8 @@ button:active,
 }
 
 .cert-icon.linux {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-}
+  /* background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%); */
+} */
 
 .cert-card h3 {
   font-size: 20px;
