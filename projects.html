@@ -15,6 +15,43 @@
     <meta property="og:description" content="IT graduate with multiple certifications including CompTIA A+, Network+, Security+, and AWS Cloud Practitioner." />
     
     <title>About Me - Toby Grewe</title>
+
+
+
+
+      <!-- TEMP CSS -->
+<style>
+
+/* Nav Link Underline Effect */
+nav a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+body {
+    cursor: url('='), auto;
+}
+</style>
+
     
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -265,6 +302,77 @@
     <script src="parallax.js"></script>
     <script src="back-to-top.js"></script>
     <script src="typing-animation.js"></script>
+
+
+<!-- TEMP JS -->
+    <!-- <script>
+     const navSounds = {
+    'About': new Audio('./sounds/click1.wav'),
+    'Projects': new Audio('./sounds/click2.wav'),
+    'Blog': new Audio('./sounds/click3.wav'),
+    'T A G': new Audio('./sounds/logo-click.wav') // Add logo sound
+};
+
+// Set volume and preload
+Object.values(navSounds).forEach(sound => {
+    sound.volume = 0.5;
+    sound.preload = 'auto';
+});
+
+// Nav links
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        const linkText = link.textContent.trim();
+        if (navSounds[linkText]) {
+            const sound = navSounds[linkText].cloneNode();
+            sound.volume = 0.5;
+            sound.play();
+        }
+    });
+});
+
+// Logo sound
+const logo = document.querySelector('.logo a');
+if (logo) {
+    logo.addEventListener('mouseenter', () => {
+        const logoText = logo.textContent.trim();
+        if (navSounds[logoText]) {
+            const sound = navSounds[logoText].cloneNode();
+            sound.volume = 0.5;
+            sound.play();
+        }
+    });
+}
+    </script> -->
+
+<script>
+     // Play flip sound when clicking any internal link
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Only for internal HTML links
+        const href = link.getAttribute('href');
+        if (href && (href.endsWith('.html') || href === 'index.html' || href.includes('.html'))) {
+            e.preventDefault(); // Stop immediate navigation
+            
+            const pageFlipSound = new Audio('sounds/ACNH-page-flip.wav');
+            pageFlipSound.volume = 0.4;
+            
+            pageFlipSound.play().catch(err => {
+                console.error('Sound error:', err);
+                window.location.href = href; // Navigate anyway if sound fails
+            });
+            
+            // Navigate after sound starts (small delay)
+            setTimeout(() => {
+                window.location.href = href;
+            }, 1200); // 200ms delay - adjust if needed
+        }
+    });
+});
+    </script>
+
+
 </body>
  
 </html>

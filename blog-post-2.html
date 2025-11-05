@@ -16,6 +16,40 @@
     
     <title>About Me - Toby Grewe</title>
     
+
+      <!-- TEMP CSS -->
+<style>
+
+/* Nav Link Underline Effect */
+nav a {
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, #00d4ff);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+body {
+    cursor: url('='), auto;
+}
+</style>
+
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,5 +243,52 @@
 
     <script src="theme.js"></script>
     <script src="back-to-top.js"></script>
+
+
+    <!-- TEMP JS -->
+    <!-- <script>
+     const navSounds = {
+    'About': new Audio('./sounds/click1.wav'),
+    'Projects': new Audio('./sounds/click2.wav'),
+    'Blog': new Audio('./sounds/click3.wav'),
+    'T A G': new Audio('./sounds/logo-click.wav') // Add logo sound
+};
+
+// Set volume and preload
+Object.values(navSounds).forEach(sound => {
+    sound.volume = 0.5;
+    sound.preload = 'auto';
+});
+
+// Nav links
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+        const linkText = link.textContent.trim();
+        if (navSounds[linkText]) {
+            const sound = navSounds[linkText].cloneNode();
+            sound.volume = 0.5;
+            sound.play();
+        }
+    });
+});
+
+// Logo sound
+const logo = document.querySelector('.logo a');
+if (logo) {
+    logo.addEventListener('mouseenter', () => {
+        const logoText = logo.textContent.trim();
+        if (navSounds[logoText]) {
+            const sound = navSounds[logoText].cloneNode();
+            sound.volume = 0.5;
+            sound.play();
+        }
+    });
+}
+    </script> -->
+
 </body>
+
+
+
 </html>
