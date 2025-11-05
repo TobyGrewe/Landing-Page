@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tobygrewe.github.io/Landing-Page/sitemap.xml
