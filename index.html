@@ -57,8 +57,44 @@
             color: #00ff88;
         }
 
-        body {
-            cursor: url('='), auto;
+        /* Certifications styling */
+        .certifications {
+            margin-top: 3rem;
+        }
+
+        .certifications h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .certifications ul {
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 2;
+            list-style: none;
+            padding: 0;
+        }
+
+        .certifications li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .certifications li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .certifications ul {
+                max-width: 100%;
+                padding: 0 1rem;
+            }
         }
     </style>
     
@@ -67,10 +103,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts - Consolidated -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;700&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css" />
@@ -105,7 +139,7 @@
         <div class="hero-content">
             <h1>Hi, I'm Toby Grewe</h1>
             <p>Aspiring Web Developer & IT Professional</p>
-            <p class="tagline">I craft clean, modern, and accessible web experiences.</p>
+            <p class="tagline">Building secure, accessible web solutions with IT expertise.</p>
             <a href="projects.html" class="btn">View My Work</a>
         </div>
     </section>
@@ -116,34 +150,34 @@
             <h2 class="section-title">My Skills & Certifications</h2>
             <div class="skills-grid">
                 <article class="skill-card">
-                    <img src="images/html-icon.png" alt="HTML5 icon representing web structure">
+                    <img src="images/html-icon.png" alt="HTML5 logo">
                     <h3>HTML</h3>
                     <p>Building semantic, accessible web structure with HTML5</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/css-icon.svg" alt="CSS3 icon representing styling">
+                    <img src="images/css-icon.svg" alt="CSS3 logo">
                     <h3>CSS</h3>
                     <p>Creating responsive, beautiful designs with CSS3</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/js-icon.png" alt="JavaScript icon representing interactivity">
+                    <img src="images/js-icon.png" alt="JavaScript logo">
                     <h3>JavaScript</h3>
                     <p>Adding interactivity and functionality with vanilla JavaScript</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/git-icon.png" alt="Git icon representing version control">
+                    <img src="images/git-icon.png" alt="Git logo">
                     <h3>Git & GitHub</h3>
                     <p>Version control and collaboration using Git and GitHub</p>
                 </article>
             </div>
 
             <!-- CERTIFICATIONS SECTION -->
-            <div class="certifications" style="margin-top: 3rem;">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Professional Certifications</h3>
-                <ul style="max-width: 600px; margin: 0 auto; line-height: 2;">
+            <div class="certifications">
+                <h3>Professional Certifications</h3>
+                <ul>
                     <li>CompTIA A+ Certified</li>
                     <li>CompTIA Network+ Certified</li>
                     <li>CompTIA Security+ Certified</li>
@@ -160,19 +194,19 @@
     <section class="quote-gallery-grid" id="quote-gallery-grid">
         <div class="container">
             <div class="gallery-grid">
-                <h2>Daily Inspiration</h2>
+                <h2>What Inspires Me</h2>
                 <article class="quote-card">
-                    <img src="images/quote1.jpg" alt="Inspirational background for Jane Goodall quote" />
+                    <img src="images/quote1.jpg" alt="Inspirational landscape" />
                     <blockquote>"You cannot get through a single day without having an impact on the world around you."</blockquote>
                     <div class="quote-author">- Jane Goodall</div>
                 </article>
                 <article class="quote-card">
-                    <img src="images/quote2.jpg" alt="Inspirational background for Gabriel García Márquez quote" />
+                    <img src="images/quote2.jpg" alt="Inspirational landscape" />
                     <blockquote>"There is always something left to love."</blockquote>
                     <div class="quote-author">- Gabriel García Márquez</div>
                 </article>
                 <article class="quote-card">
-                    <img src="images/quote1.jpeg" alt="Inspirational background for Albert Camus quote" />
+                    <img src="images/quote1.jpeg" alt="Inspirational landscape" />
                     <blockquote>"The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy."</blockquote>
                     <div class="quote-author">- Albert Camus</div>
                 </article>
@@ -187,7 +221,7 @@
                 <h3>Ready to Connect?</h3>
                 <p>Interested in collaborating or learning more about my work? Let's connect on LinkedIn or check out my projects on GitHub!</p>
             </div>
-            <a href="https://www.linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" class="cta-button">Connect with Toby Grewe</a>
+            <a href="https://www.linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" class="cta-button">View LinkedIn Profile</a>
         </div>
     </section>
 
@@ -258,28 +292,16 @@
     <script src="typing-animation.js"></script>
     <script src="autoslide.js"></script>
 
-    <!-- TEMP JS -->
+    <!-- Page Navigation Sound -->
     <script>
-        // Play flip sound when clicking any internal link
         document.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', (e) => {
-                // Only for internal HTML links
                 const href = link.getAttribute('href');
                 if (href && (href.endsWith('.html') || href === 'index.html' || href.includes('.html'))) {
-                    e.preventDefault(); // Stop immediate navigation
-                    
                     const pageFlipSound = new Audio('sounds/ACNH-page-flip.wav');
                     pageFlipSound.volume = 0.4;
-                    
-                    pageFlipSound.play().catch(err => {
-                        console.error('Sound error:', err);
-                        window.location.href = href; // Navigate anyway if sound fails
-                    });
-                    
-                    // Navigate after sound starts (small delay)
-                    setTimeout(() => {
-                        window.location.href = href;
-                    }, 1200); // 200ms delay - adjust if needed
+                    pageFlipSound.play().catch(err => console.error('Sound error:', err));
+                    // Sound plays but doesn't block navigation
                 }
             });
         });
