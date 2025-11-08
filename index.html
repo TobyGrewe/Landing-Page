@@ -83,12 +83,15 @@
         }
 
         .certifications li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #00ff88;
-            font-weight: bold;
-        }
+    content: '\f559';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #1b55c0;
+    font-size: 30px;
+    padding: px;
+}
 
         @media (max-width: 768px) {
             .certifications ul {
@@ -96,6 +99,68 @@
                 padding: 0 1rem;
             }
         }
+
+
+/* Wave Design */
+.wave {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-top: -1px;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.wave .shape-fill {
+    fill: #3881f6b7;
+}
+
+
+
+/* Bottom Wave Design */
+.wave-bottom {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    margin-bottom: -1px;
+}
+
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 80px;
+}
+
+.wave-bottom .shape-fill-bottom {
+    fill: #2c2c2c;;  /* Match your footer color - adjust if needed */
+}
+
+
+
+/* Logo Click Effect */
+.home-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.home-link:active {
+    transform: scale(0.9);
+    animation: logoClick 0.6s ease;
+}
+
+@keyframes logoClick {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
     </style>
     
     <!-- Preconnect -->
@@ -142,7 +207,22 @@
             <p class="tagline">Building secure, accessible web solutions with IT expertise.</p>
             <a href="projects.html" class="btn">View My Work</a>
         </div>
+
+   
+    </div>
+
     </section>
+
+    <!-- WAVES -->
+       <section>   <!-- Wave Shape -->
+    <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+    <path d="M0,0 L0,120 Q600,20 1200,120 L1200,0 Z" class="shape-fill"></path>
+</svg>
+</section>
+
+
+
 
     <!-- MY SKILLS -->
     <section class="skills" id="skills">
@@ -214,7 +294,7 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION -->
+    <!-- CALL TO ACTION
     <section class="cta">
         <div class="cta-box">
             <div class="cta-text">
@@ -223,7 +303,26 @@
             </div>
             <a href="https://www.linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" class="cta-button">View LinkedIn Profile</a>
         </div>
-    </section>
+    </section> -->
+
+
+
+<!-- Bottom Wave Shape -->
+<div class="wave-bottom">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,120 L0,0 Q600,100 1200,0 L1200,120 Z" class="shape-fill-bottom"></path>
+    </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- FOOTER -->
     <footer>

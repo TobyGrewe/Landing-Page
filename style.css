@@ -24,7 +24,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   animation: pageLoad 0.5s ease-out;
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 
@@ -44,11 +44,6 @@ body {
 .skip-link:focus {
   top: 0;
 }
-
-
-
-
-
 
 
 
@@ -152,7 +147,7 @@ section {
    ============================================ */
 
 header {
-  background-color: #ffffff;
+  background-color: #2c2c2c;
   display:flex;
   justify-content: space-between;
   align-items: center;
@@ -162,19 +157,23 @@ header {
   right: 0;
   width: 100%;
   height:auto;
-  border-bottom: 1px solid #e5e7eb;
+  /* border-bottom: 1px solid #ffffff; */
   z-index: 1000;
   top: 0;
   left: 0;
-  padding: 5px 20px;
+  padding: 10px 20px;
+  padding-bottom: 10px;
+  color:wh
+  
   
 }
 
 .logo {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 300;
   flex-shrink: 0;
- 
+  margin: -45px;
+  color: white;
 }
 
 
@@ -183,52 +182,62 @@ header {
 .logo,
 .home-link {
   font-family: "Space Grotesk", sans-serif;
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 100;
   transition: color 0.3s ease;
-  padding: 16px;
-}
-
-
-.home-link {
-  color: #000;
-  text-decoration: none;
-  font-size: 30px;
-  font-weight: initial;
-  justify-content: space-between;
-  transition: color 0.3s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 300;
-  justify-content: flex-start;
-  padding: 16px;
+  padding: 26px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
 }
 
-.home-link:hover {
-  color: #3882f6;
+/* TAG text top left */
+.home-link {
+  color: #ffffffe5;
+  text-decoration: none;
+  font-size: 35px;
+  font-weight: initial;
+  justify-content: space-between;
+  transition: color 0.3s ease;
+  
+  font-weight: 150;
+  justify-content: flex-start;
+  padding: 16px;
+  font-style:;
+  font-
+  
 }
 
+/* link hover color for TAG Logo */
+.home-link:hover {
+  color: darkslategray;
+}
+
+
+/* Header NAV */
 nav {
   display: flex;
   flex-direction: column;
   gap: 15px;
   align-items: flex-end;
   margin-left: auto;
+  padding: 20px;
   
   
   
 }
 
+/* NAV LINKS */
 nav a {
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
   position: relative;
   padding: 5px 0;
-  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+  font-style: oblique;
 
 }
 
@@ -262,7 +271,7 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   overflow: hidden;
   /* background: linear-gradient(135deg, #1f2937, #111827); backup gradient for hero image  */
@@ -291,21 +300,23 @@ nav a:hover::after {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #ffffffd5;
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 1rem;
+  color:#c5dceb
 }
 
 .hero .tagline {
   font-size: 1rem;
-  color: #ccc;
+  color: #fff4f4;
   margin-bottom: 2rem;
 }
 
 .btn {
-  background-color: #2563eb;
+  background-color: #2851a894;
   color: white;
   padding: 0.8rem 1.5rem;
   border-radius: 6px;
@@ -314,6 +325,7 @@ nav a:hover::after {
   transition: background-color 0.3s ease;
 }
 
+/* View my work hover action */
 .btn:hover {
   background-color: #1e40af;
 }
@@ -337,7 +349,7 @@ nav a:hover::after {
 
 button,
 .hero-button {
-  background-color: #3882f6;
+  background-color: #3881f6b7;
   color: white;
   border: none;
   padding: 10px 30px;
@@ -383,7 +395,7 @@ button:hover,
 button:active,
 .hero-button:active {
   transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
 }
 
 
@@ -410,16 +422,17 @@ button:active,
    ============================================ */
 
 .skills {
-  background: #f9fafb;
+  background: #ffffff56;
   padding: 5rem 1rem;
   text-align: center;
+  margin: px;
 
 }
 .section-title {
   font-size: 2rem;
   font-weight:700;
   margin-bottom:3rem;
-  color: #111827;
+  color: #000000d5;
 }
 
 .skills-grid {
@@ -484,7 +497,7 @@ button:active,
    ============================================ */
 
 .quote {
-  background-color: #e5e7eb;
+  background-color: #215bcff1;
   padding: 100px 200px;
 }
 
@@ -501,10 +514,10 @@ button:active,
 }
 
 .quote p {
-  font-size: 36px;
+  font-size: 364px;
   font-weight: 300;
   font-style: italic;
-  color: #1f2937;
+  color: #ddd5d5;
   margin-bottom: 20px;
   animation: fadeIn 1s ease-out;
 }
@@ -513,7 +526,7 @@ button:active,
   text-align: right;
   font-size: 24px;
   font-weight: bold;
-  color: #1f2937;
+  color: #000000;
   animation: slideInRight 0.8s ease-out 0.3s both;
 }
 
@@ -531,10 +544,10 @@ button:active,
 }
 
 .quote-card {
-  background: #f9f9f9;
+  background: #ffffffc7;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   padding: 15px;
   display: flex;
@@ -555,12 +568,12 @@ button:active,
   font-size: 1.1rem;
   flex-grow: 1; /* Push author down */
   margin-bottom: 12px;
-  color: #333;
+  color: #000000cc;
 }
 
 .quote-author {
   font-weight: 700;
-  color: #555;
+  color: #000000c9;
 }
 
 .quote-card img {
@@ -571,7 +584,7 @@ button:active,
   border-radius: 8px;
   transition: transform 0.3s ease; /* Smooth animation on hover */
 }
-
+/* quote card effect on hover */
 .quote-card:hover img {
   transform: scale(1.05);
   cursor: pointer;
@@ -636,7 +649,7 @@ button:active,
 
 .cta-box {
   background-color: #200c3a;
-  color: white;
+  color: rgba(255, 255, 255, 0.836);
   padding: 50px 100px;
   border-radius: 10px;
   display: flex;
@@ -657,14 +670,20 @@ button:active,
 }
 
 .cta-button {
-  border: 2px solid white;
-  background-color: #3882f6;
+  border: 5px solid rgb(0, 0, 0);
+  background-color: #ffffff;
   transition: all 0.3s ease;
+  border-radius: 10px;
+  text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: white;
-  color: #3882f6;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+}
+
+.cta-button:visited{
+  color: #00000091;
 }
 
 /* ============================================
@@ -1554,7 +1573,7 @@ footer {
 .post-quote {
   margin: 50px 0;
   padding: 40px;
-  background: #f9faf8;
+  background: #000000;
   border-radius: 12px;
   position: relative;
 }
@@ -1580,7 +1599,7 @@ footer {
 .post-footer {
   margin-top: 60px;
   padding-top: 40px;
-  border-top: 2px solid #e5e7eb;
+  border-top: 2px solid #000000;
 }
 
 .post-tags {
@@ -2002,7 +2021,7 @@ a:focus,
 button:focus,
 input:focus,
 textarea:focus {
-  outline: 3px solid #111111;
+  outline: px solid #fdfdfd;
   outline-offset: 2px;
 }
 
