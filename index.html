@@ -5,9 +5,9 @@
     <meta name="google-site-verification" content="tAUtkDWs_3ShMTuUJrZbwyjIpR8SjTwAvwAlZH65q8s" />
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <!-- SEO Meta Tags - ENHANCED -->
+    <!-- SEO Meta Tags -->
     <title>About Toby Grewe - IT Professional | CompTIA Certified Web Developer</title>
     <meta name="description" content="Toby Grewe is an IT professional and web developer based in Fort Walton Beach, FL. CompTIA A+, Network+, Security+, Project+ certified with AWS CCP and ITIL expertise. Specializing in HTML, CSS, JavaScript, and Git." />
     <meta name="keywords" content="Toby Grewe, IT Professional, Web Developer, CompTIA A+, CompTIA Network+, CompTIA Security+, CompTIA Project+, AWS Certified Cloud Practitioner, ITIL, HTML, CSS, JavaScript, Git, GitHub, Fort Walton Beach" />
@@ -17,7 +17,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tobygrewe.github.io/Landing-Page/about.html" />
     
-    <!-- Open Graph / Facebook - ENHANCED -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tobygrewe.github.io/Landing-Page/about.html" />
     <meta property="og:title" content="About Toby Grewe - IT Professional & Web Developer" />
@@ -30,14 +30,13 @@
     <meta name="twitter:description" content="IT professional with multiple CompTIA certifications and web development expertise" />
     <meta name="twitter:image" content="https://tobygrewe.github.io/Landing-Page/images/toby-grewe-og.jpg" />
 
-    <!-- TEMP CSS -->
+    <!-- Inline Styles for Specific Elements -->
     <style>
         /* Nav Link Underline Effect */
         nav a {
             position: relative;
             transition: color 0.3s;
         }
-
         nav a::after {
             content: '';
             position: absolute;
@@ -48,26 +47,22 @@
             background: linear-gradient(90deg, #00ff88, #00d4ff);
             transition: width 0.3s ease;
         }
-
         nav a:hover::after {
             width: 100%;
         }
-
         nav a:hover {
             color: #00ff88;
         }
 
-        /* Certifications styling */
+        /* Certifications Styling */
         .certifications {
             margin-top: 3rem;
         }
-
         .certifications h3 {
             text-align: center;
             margin-bottom: 2rem;
             font-size: 1.8rem;
         }
-
         .certifications ul {
             max-width: 600px;
             margin: 0 auto;
@@ -75,23 +70,19 @@
             list-style: none;
             padding: 0;
         }
-
         .certifications li {
-            padding: 0.5rem 0;
+            padding: 0.5rem 0 0.5rem 1.5rem;
             position: relative;
-            padding-left: 1.5rem;
         }
-
         .certifications li::before {
-    content: '\f559';
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: #1b55c0;
-    font-size: 30px;
-    padding: px;
-}
+            content: '\f559';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #1b55c0;
+            font-size: 30px;
+        }
 
         @media (max-width: 768px) {
             .certifications ul {
@@ -100,93 +91,64 @@
             }
         }
 
+        /* Wave Design */
+        .wave {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: -1px;
+        }
+        .wave svg {
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+        .wave .shape-fill {
+            fill: #4a90e2;
+            
+        }
 
-/* Wave Design */
-.wave {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    margin-top: -1px;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 80px;
-}
-
-.wave .shape-fill {
-    fill: #3881f6b7;
-}
-
-
-
-/* Bottom Wave Design */
-.wave-bottom {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    margin-bottom: -1px;
-}
-
-.wave-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 80px;
-}
-
-.wave-bottom .shape-fill-bottom {
-    fill: #2c2c2c;;  /* Match your footer color - adjust if needed */
-}
-
-
-
-/* Logo Click Effect */
-.home-link {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.home-link:active {
-    transform: scale(0.9);
-    animation: logoClick 0.6s ease;
-}
-
-@keyframes logoClick {
-    0% { transform: scale(0.9); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
+        /* Logo Click Effect */
+        .home-link {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .home-link:active {
+            transform: scale(0.9);
+            animation: logoClick 0.6s ease;
+        }
+        @keyframes logoClick {
+            0% { transform: scale(0.9); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
-    
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Fonts - Consolidated -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;700&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
+
+    <!-- Preconnect for Fonts & CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@700&family=DM+Sans:wght@400;700&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet" />
+
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/Landing-Page/images/favicon/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/Landing-Page/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Landing-Page/images/favicon/favicon-16x16.png">
+    <!-- Favicons -->
+    <link rel="icon" href="/Landing-Page/images/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Landing-Page/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Landing-Page/images/favicon/favicon-16x16.png" />
 </head>
-
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
+
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
+
     <header>
         <div class="logo">
             <a href="index.html" class="home-link">T A G</a>
@@ -207,22 +169,16 @@
             <p class="tagline">Building secure, accessible web solutions with IT expertise.</p>
             <a href="projects.html" class="btn">View My Work</a>
         </div>
-
-   
-    </div>
-
     </section>
 
     <!-- WAVES -->
-       <section>   <!-- Wave Shape -->
-    <div class="wave">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-    <path d="M0,0 L0,120 Q600,20 1200,120 L1200,0 Z" class="shape-fill"></path>
-</svg>
-</section>
-
-
-
+    <section>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <path d="M0,0 L0,120 Q600,20 1200,120 L1200,0 Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
 
     <!-- MY SKILLS -->
     <section class="skills" id="skills">
@@ -230,25 +186,25 @@
             <h2 class="section-title">My Skills & Certifications</h2>
             <div class="skills-grid">
                 <article class="skill-card">
-                    <img src="images/html-icon.png" alt="HTML5 logo">
+                    <img src="images/html-icon.png" alt="HTML5 logo" />
                     <h3>HTML</h3>
                     <p>Building semantic, accessible web structure with HTML5</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/css-icon.svg" alt="CSS3 logo">
+                    <img src="images/css-icon.svg" alt="CSS3 logo" />
                     <h3>CSS</h3>
                     <p>Creating responsive, beautiful designs with CSS3</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/js-icon.png" alt="JavaScript logo">
+                    <img src="images/js-icon.png" alt="JavaScript logo" />
                     <h3>JavaScript</h3>
                     <p>Adding interactivity and functionality with vanilla JavaScript</p>
                 </article>
 
                 <article class="skill-card">
-                    <img src="images/git-icon.png" alt="Git logo">
+                    <img src="images/git-icon.png" alt="Git logo" />
                     <h3>Git & GitHub</h3>
                     <p>Version control and collaboration using Git and GitHub</p>
                 </article>
@@ -273,8 +229,8 @@
     <!-- QUOTES GALLERY -->
     <section class="quote-gallery-grid" id="quote-gallery-grid">
         <div class="container">
+            <h2>What Inspires Me</h2>
             <div class="gallery-grid">
-                <h2>What Inspires Me</h2>
                 <article class="quote-card">
                     <img src="images/quote1.jpg" alt="Inspirational landscape" />
                     <blockquote>"You cannot get through a single day without having an impact on the world around you."</blockquote>
@@ -294,36 +250,6 @@
         </div>
     </section>
 
-    <!-- CALL TO ACTION
-    <section class="cta">
-        <div class="cta-box">
-            <div class="cta-text">
-                <h3>Ready to Connect?</h3>
-                <p>Interested in collaborating or learning more about my work? Let's connect on LinkedIn or check out my projects on GitHub!</p>
-            </div>
-            <a href="https://www.linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" class="cta-button">View LinkedIn Profile</a>
-        </div>
-    </section> -->
-
-
-
-<!-- Bottom Wave Shape -->
-<div class="wave-bottom">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,120 L0,0 Q600,100 1200,0 L1200,120 Z" class="shape-fill-bottom"></path>
-    </svg>
-</div>
-
-
-
-
-
-
-
-
-
-
-
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -337,11 +263,9 @@
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-                <div class="footer-copyright">
-                    <p>Copyright © Toby Grewe 2025</p>
-                </div>
+                <p>© Toby Grewe 2025</p>
             </div>
-            
+
             <div class="footer-center">
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="index.html">Home</a>
@@ -350,7 +274,7 @@
                     <a href="blog.html">Blog</a>
                 </nav>
             </div>
-            
+
             <div class="footer-right">
                 <div class="footer-contact">
                     <p>IT Professional</p>
@@ -384,26 +308,11 @@
     }
     </script>
 
-    <!-- EXTERNAL JS SCRIPTS -->
+    <!-- External JS Scripts -->
     <script src="theme.js"></script>
     <script src="parallax.js"></script>
     <script src="back-to-top.js"></script>
     <script src="typing-animation.js"></script>
     <script src="autoslide.js"></script>
-
-    <!-- Page Navigation Sound -->
-    <script>
-        document.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const href = link.getAttribute('href');
-                if (href && (href.endsWith('.html') || href === 'index.html' || href.includes('.html'))) {
-                    const pageFlipSound = new Audio('sounds/ACNH-page-flip.wav');
-                    pageFlipSound.volume = 0.4;
-                    pageFlipSound.play().catch(err => console.error('Sound error:', err));
-                    // Sound plays but doesn't block navigation
-                }
-            });
-        });
-    </script>
 </body>
 </html>
