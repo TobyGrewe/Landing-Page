@@ -41,59 +41,7 @@
       referrerpolicy="no-referrer" 
     />
     
-    <!-- Custom CSS -->
-    <style>
-        /* Nav Link Underline Effect */
-        nav a {
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #00ff88, #00d4ff);
-            transition: width 0.3s ease;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        nav a:hover {
-            color: #00ff88;
-        }
-
-
-        /* If nav is vertical on about.html */
-nav a::after {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Or override to horizontal nav styles */
-nav {
-    flex-direction: row !important;
-    padding: 0 !important;
-    gap: 30px !important;
-}
-
-
-
-
-
-
-
-
-
-
-        
-    </style>
+   
 </head>
 
 <body class="about-page">
@@ -103,7 +51,6 @@ nav {
     <div class="cursor-follower"></div>
 
     <!-- SKIP BUTTON LINK -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -247,41 +194,41 @@ nav {
         </section>
     </main>
 
+     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="footer-left">
                 <div class="footer-logo">T A G</div>
                 <div class="footer-social">
-                    <a href="https://github.com/TobyGrewe" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                    <a href="https://github.com/TobyGrewe" target="_blank" rel="noopener noreferrer" aria-label="Toby Grewe GitHub Profile">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/tobygrewe" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" aria-label="Toby Grewe LinkedIn Profile">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
-                <div class="footer-copyright">
-                    <p>Copyright © Toby Grewe 2025</p>
-                </div>
+                <p>© Toby Grewe 2025</p>
             </div>
-            
+
             <div class="footer-center">
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="index.html">Home</a>
-                    <a href="about.html" aria-current="page">About</a>
+                    <a href="about.html">About</a>
                     <a href="projects.html">Projects</a>
                     <a href="blog.html">Blog</a>
                 </nav>
             </div>
-            
+
             <div class="footer-right">
                 <div class="footer-contact">
-                    <p>IT Professional</p>
-                    <p>Web Developer</p>
-                    <p>Fort Walton Beach, FL</p>
+                    <p><i class="fa-solid fa-user"></i>IT Professional</p>
+                    <p><i class="fa-solid fa-globe"></i>Web Developer</p>
+                    <p><i class="fa-solid fa-house"></i>Fort Walton Beach, FL</p>
                 </div>
             </div>
         </div>
     </footer>
+
 
     <!-- External JS -->
     <script src="theme.js"></script>

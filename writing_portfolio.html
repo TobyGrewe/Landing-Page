@@ -4,207 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toby Grewe - Creative Writings</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Crimson Text', 'Palatino', 'Georgia', serif;
-            background: linear-gradient(135deg, #a88860 0%, #8b7355 100%);
-            min-height: 100vh;
-            padding: 40px 20px;
-            line-height: 1.7;
-        }
-
-        .notebook {
-            max-width: 900px;
-            margin: 0 auto;
-            background: linear-gradient(to bottom, #f4e8d0 0%, #f0ddb8 100%);
-            border-radius: 8px;
-            box-shadow: 
-                0 4px 8px rgba(0,0,0,0.3),
-                inset 0 0 100px rgba(139, 115, 85, 0.1);
-            padding: 60px 80px;
-            position: relative;
-            border: 1px solid #c9a86a;
-        }
-
-        .notebook::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    0deg,
-                    transparent,
-                    transparent 31px,
-                    rgba(139, 115, 85, 0.05) 31px,
-                    rgba(139, 115, 85, 0.05) 32px
-                );
-            pointer-events: none;
-            border-radius: 8px;
-        }
-
-        .page-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', 'Palatino', serif;
-            font-size: 3em;
-            color: #3d2817;
-            text-align: center;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #6b5239;
-            font-size: 1.1em;
-            margin-bottom: 50px;
-            font-style: italic;
-        }
-
-        .essay-list {
-            margin-top: 40px;
-        }
-
-        .essay-card {
-            background: rgba(255, 255, 255, 0.4);
-            border-left: 4px solid #8b6f47;
-            padding: 25px 30px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .essay-card:hover {
-            background: rgba(255, 255, 255, 0.6);
-            transform: translateX(5px);
-            box-shadow: 4px 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .essay-card h2 {
-            font-family: 'Playfair Display', serif;
-            color: #3d2817;
-            font-size: 1.8em;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .essay-card p {
-            color: #5a4a3a;
-            font-size: 1.05em;
-            line-height: 1.6;
-        }
-
-        .essay-content {
-            display: none;
-            margin-top: 30px;
-            color: #3d2817;
-            font-size: 1.1em;
-        }
-
-        .essay-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .essay-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
-            color: #3d2817;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .essay-content p {
-            margin-bottom: 20px;
-            text-align: justify;
-            text-indent: 2em;
-        }
-
-        .essay-content em {
-            font-style: italic;
-        }
-
-        .back-btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #8b6f47;
-            color: #f4e8d0;
-            border: none;
-            border-radius: 4px;
-            font-size: 1em;
-            cursor: pointer;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-            font-family: inherit;
-            box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-        }
-
-        .back-btn:hover {
-            background: #6b5239;
-            transform: translateY(-2px);
-            box-shadow: 3px 3px 8px rgba(0,0,0,0.3);
-        }
-
-        .references {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid rgba(139, 111, 71, 0.3);
-        }
-
-        .references h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #3d2817;
-        }
-
-        .references p {
-            font-size: 0.95em;
-            text-indent: -2em;
-            padding-left: 2em;
-            margin-bottom: 12px;
-        }
-
-        @media (max-width: 768px) {
-            .notebook {
-                padding: 40px 30px;
-            }
-
-            h1 {
-                font-size: 2.2em;
-            }
-
-            .essay-card h2 {
-                font-size: 1.5em;
-            }
-
-            .essay-content {
-                font-size: 1em;
-            }
-        }
-    </style>
+    
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
  <!-- Preconnect -->
@@ -244,7 +44,8 @@
 
 </head> 
   
-<body>
+<body class="writing-portfolio">
+
     <div class="notebook">
         <div class="page-content">
             <div id="main-view">
@@ -283,6 +84,42 @@
         </div>
     </div>
 
+
+
+     <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">T A G</div>
+                <div class="footer-social">
+                    <a href="https://github.com/TobyGrewe" target="_blank" rel="noopener noreferrer" aria-label="Toby Grewe GitHub Profile">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" aria-label="Toby Grewe LinkedIn Profile">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <p>© Toby Grewe 2025</p>
+            </div>
+
+            <div class="footer-center">
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="blog.html">Blog</a>
+                </nav>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-user"></i>IT Professional</p>
+                    <p><i class="fa-solid fa-globe"></i>Web Developer</p>
+                    <p><i class="fa-solid fa-house"></i>Fort Walton Beach, FL</p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         const essays = {
             frida: {
