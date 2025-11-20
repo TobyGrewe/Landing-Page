@@ -1609,7 +1609,9 @@ button:focus-visible {
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+
+  background: #0a1929;
+  background-color: #4b55ad7c;
 }
 
 .btn-secondary {
