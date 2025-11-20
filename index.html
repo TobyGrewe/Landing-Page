@@ -8,29 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- SEO Meta Tags -->
-    <title>About Toby Grewe - IT Professional | CompTIA Certified Web Developer</title>
-    <meta name="description" content="Toby Grewe is an IT professional and web developer based in Fort Walton Beach, FL. CompTIA A+, Network+, Security+, Project+ certified with AWS CCP and ITIL expertise. Specializing in HTML, CSS, JavaScript, and Git." />
-    <meta name="keywords" content="Toby Grewe, IT Professional, Web Developer, CompTIA A+, CompTIA Network+, CompTIA Security+, CompTIA Project+, AWS Certified Cloud Practitioner, ITIL, HTML, CSS, JavaScript, Git, GitHub, Fort Walton Beach" />
+    <title>Toby Grewe - Web Developer & IT Professional Portfolio</title>
+    <meta name="description" content="Portfolio of Toby Grewe - Web Developer & IT Professional. CompTIA certified with expertise in HTML, CSS, JavaScript. View my projects and experience." />
+    <meta name="keywords" content="Toby Grewe, Web Developer, IT Professional, Portfolio, CompTIA, HTML, CSS, JavaScript, Fort Walton Beach" />
     <meta name="author" content="Toby Grewe" />
     <meta name="robots" content="index, follow" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tobygrewe.github.io/Landing-Page/about.html" />
+    <link rel="canonical" href="https://tobygrewe.github.io/Landing-Page/" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tobygrewe.github.io/Landing-Page/about.html" />
-    <meta property="og:title" content="About Toby Grewe - IT Professional & Web Developer" />
-    <meta property="og:description" content="IT professional with CompTIA A+, Network+, Security+, Project+, AWS CCP, and ITIL certifications. Specializing in web development with HTML, CSS, JavaScript." />
+    <meta property="og:url" content="https://tobygrewe.github.io/Landing-Page/" />
+    <meta property="og:title" content="Toby Grewe - Web Developer & IT Professional" />
+    <meta property="og:description" content="Portfolio showcasing web development projects and IT expertise" />
     <meta property="og:image" content="https://tobygrewe.github.io/Landing-Page/images/toby-grewe-og.jpg" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About Toby Grewe - IT Professional & Web Developer" />
-    <meta name="twitter:description" content="IT professional with multiple CompTIA certifications and web development expertise" />
+    <meta name="twitter:title" content="Toby Grewe - Web Developer Portfolio" />
+    <meta name="twitter:description" content="Web Developer & IT Professional Portfolio" />
     <meta name="twitter:image" content="https://tobygrewe.github.io/Landing-Page/images/toby-grewe-og.jpg" />
-
-    
 
     <!-- Preconnect for Fonts & CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,8 +48,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/Landing-Page/images/favicon/favicon-16x16.png" />
 </head>
 <body>
-    <!-- <a href="#main-content" class="skip-link">Skip to main content</a> -->
-
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -61,7 +57,7 @@
             <a href="index.html" class="home-link">T A G</a>
         </div>
         <nav aria-label="Main navigation">
-            <a href="about.html" aria-current="page">About</a>
+            <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="blog.html">Blog</a>
         </nav>
@@ -70,89 +66,160 @@
     <!-- HERO SECTION -->
     <section class="hero" id="main-content">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Hi, I'm Toby Grewe <i class="fa-solid fa-face-smile"></i></h1>
-            <p>Web Developer & IT Professional</p>
-            <p class="tagline">Building secure, accessible web solutions with IT expertise.</p>
-            <a href="projects.html" class="btn">View My Work</a>
+        <div class="hero-content-wrapper">
+            <div class="hero-text">
+                <h1>Hi, I'm Toby Grewe <i class="fa-solid fa-face-smile"></i></h1>
+                <p class="hero-subtitle">Web Developer & IT Professional</p>
+                <p class="tagline">Transforming ideas into clean, functional websites with a foundation in IT security and infrastructure.</p>
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/pic.png" alt="Toby Grewe headshot" />
+            </div>
         </div>
+        
+        <!-- Scroll indicator -->
+        <a href="#stats" class="scroll-indicator" aria-label="Scroll down to view more">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
-    <!-- WAVES
-    <section>
-        <div class="wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-                <path d="M0,0 L0,120 Q600,20 1200,120 L1200,0 Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section> -->
-
-    <!-- MY SKILLS -->
-    <section class="skills" id="skills">
+    <!-- QUICK STATS SECTION -->
+    <section class="stats-section" id="stats">
         <div class="container">
-            <h2 class="section-title">My Skills & Certifications</h2>
-            <div class="skills-grid">
-                <article class="skill-card">
-                    <img src="images/html-icon.png" alt="HTML5 logo" />
-                    <h3>HTML</h3>
-                    <p>Building semantic, accessible web structure with HTML5</p>
-                </article>
-
-                <article class="skill-card">
-                    <img src="images/css-icon.svg" alt="CSS3 logo" />
-                    <h3>CSS</h3>
-                    <p>Creating responsive, beautiful designs with CSS3</p>
-                </article>
-
-                <article class="skill-card">
-                    <img src="images/js-icon.png" alt="JavaScript logo" />
-                    <h3>JavaScript</h3>
-                    <p>Adding interactivity and functionality with vanilla JavaScript</p>
-                </article>
-
-                <article class="skill-card">
-                    <img src="images/git-icon.png" alt="Git logo" />
-                    <h3>Git & GitHub</h3>
-                    <p>Version control and collaboration using Git and GitHub</p>
-                </article>
-            </div>
-
-            <!-- CERTIFICATIONS SECTION -->
-            <div class="certifications">
-                <h3>Professional Certifications</h3>
-                <ul>
-                    <li>CompTIA A+ Certified</li>
-                    <li>CompTIA Network+ Certified</li>
-                    <li>CompTIA Security+ Certified</li>
-                    <li>CompTIA Project+ Certified</li>
-                    <li>AWS Certified Cloud Practitioner (CCP)</li>
-                    <li>ITIL Foundation Certified</li>
-                    <li>LPI Linux Essentials</li>
-                </ul>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>7+</h3>
+                    <p>Professional Certifications</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <h3>HTML, CSS, JS</h3>
+                    <p>Web Technologies</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Growing</h3>
+                    <p>Project Portfolio</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>IT</h3>
+                    <p>Graduate Background</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- QUOTES GALLERY -->
-    <section class="quote-gallery-grid" id="quote-gallery-grid">
+    <!-- FEATURED SKILLS -->
+    <section class="featured-skills">
         <div class="container">
-            <h2>What Inspires Me</h2>
-            <div class="gallery-grid">
-                <article class="quote-card">
-                    <img src="images/quote1.jpg" alt="Inspirational landscape" />
-                    <blockquote>"You cannot get through a single day without having an impact on the world around you."</blockquote>
-                    <div class="quote-author">- Jane Goodall</div>
-                </article>
-                <article class="quote-card">
-                    <img src="images/quote2.jpg" alt="Inspirational landscape" />
-                    <blockquote>"There is always something left to love."</blockquote>
-                    <div class="quote-author">- Gabriel García Márquez</div>
-                </article>
-                <article class="quote-card">
-                    <img src="images/quote1.jpeg" alt="Inspirational landscape" />
-                    <blockquote>"The struggle itself towards the heights is enough to fill a man's heart. One must imagine Sisyphus happy."</blockquote>
-                    <div class="quote-author">- Albert Camus</div>
-                </article>
+            <h2 class="section-title">What I Bring to the Table</h2>
+            <p class="section-subtitle">Combining web development skills with IT expertise</p>
+            
+            <div class="skills-showcase">
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
+                        <li>Git & GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>IT & Security</h3>
+                    <ul>
+                        <li>CompTIA Security+</li>
+                        <li>Network Administration</li>
+                        <li>Cloud Computing (AWS)</li>
+                        <li>System Troubleshooting</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Project Management</h3>
+                    <ul>
+                        <li>CompTIA Project+</li>
+                        <li>ITIL Framework</li>
+                        <li>Agile Methodologies</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENT WORK PREVIEW -->
+    <section class="recent-work">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Check out some of my recent work</p>
+            
+            <div class="work-preview-grid">
+                <a href="projects.html" class="work-preview-card">
+                    <div class="work-preview-image">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="work-preview-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A modern, responsive portfolio built from scratch using HTML, CSS, and JavaScript.</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="projects.html" class="work-preview-card">
+                    <div class="work-preview-image">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="work-preview-content">
+                        <h3>More Projects Coming Soon</h3>
+                        <p>Currently working on exciting new projects. Stay tuned for updates!</p>
+                        <div class="work-tags">
+                            <span class="tag">In Progress</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="cta-center">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Build Something Together</h2>
+                <p>I'm always interested in hearing about new opportunities and projects. Feel free to reach out!</p>
+                <div class="cta-buttons">
+                    <a href="https://github.com/TobyGrewe" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                        <i class="fab fa-github"></i> View GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/tobygrewe" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -198,9 +265,9 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Toby Grewe",
-      "url": "https://tobygrewe.github.io/Landing-Page/about.html",
-      "jobTitle": "IT Professional",
-      "description": "IT professional and web developer specializing in HTML, CSS, JavaScript with CompTIA A+, Network+, Security+, Project+, AWS CCP, and ITIL certifications",
+      "url": "https://tobygrewe.github.io/Landing-Page/",
+      "jobTitle": "Web Developer & IT Professional",
+      "description": "Web developer and IT professional with CompTIA certifications specializing in HTML, CSS, JavaScript and IT infrastructure",
       "knowsAbout": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "CompTIA A+", "CompTIA Network+", "CompTIA Security+", "CompTIA Project+", "AWS Certified Cloud Practitioner", "ITIL", "Web Development", "Cybersecurity", "Cloud Computing"],
       "sameAs": [
         "https://www.linkedin.com/in/tobygrewe",
