@@ -26,17 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <style>
-        /*
-        * NOTE: The styles below are a mix of the B&W theme 
-        * and general layout styles needed for this specific page.
-        * Please ensure these are correctly integrated into your
-        * main 'style.css' file to ensure consistency with the B&W theme
-        * and your main page layout.
-        */
-        
         /* General Layout Overrides for this page's content */
         main {
-            padding: 80px 0; /* Add top padding to clear the fixed header */
+            padding: 80px 0;
             min-height: 80vh;
         }
 
@@ -46,16 +38,16 @@
             margin: 0 auto;
         }
 
-        /* Black and White Theme & Content Styling */
+        /* Black and White Theme & Content Styling (Light Mode) */
         body {
-            background-color: #ffffff; /* White background */
-            color: #333333; /* Dark text */
+            background-color: #ffffff;
+            color: #333333;
             line-height: 1.6;
         }
 
         h2 {
-            color: #000000; /* Black heading */
-            border-bottom: 1px solid #cccccc; /* Light gray line */
+            color: #000000;
+            border-bottom: 1px solid #cccccc;
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-family: 'Space Grotesk', sans-serif;
@@ -71,13 +63,13 @@
         }
 
         .essay-card {
-            background-color: #f9f9f9; /* Off-white card background */
+            background-color: #f9f9f9;
             padding: 20px;
             border-radius: 0;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            border-left: 4px solid #333333; /* Dark border accent */
+            border-left: 4px solid #333333;
         }
 
         .essay-card:hover {
@@ -165,6 +157,102 @@
             color: #555555;
             margin-top: 10px;
         }
+        
+        /* --- DARK MODE STYLES --- */
+
+        body[data-theme="dark"] {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body[data-theme="dark"] header {
+            background-color: #000000;
+            box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+        }
+
+        body[data-theme="dark"] nav a {
+            color: #ffffff;
+        }
+
+        body[data-theme="dark"] nav a:hover,
+        body[data-theme="dark"] nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff;
+        }
+
+        body[data-theme="dark"] h2 {
+            color: #ffffff;
+            border-bottom: 1px solid #444444;
+        }
+
+        body[data-theme="dark"] .essay-card {
+            background-color: #1e1e1e;
+            box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #cccccc;
+        }
+
+        body[data-theme="dark"] .essay-card h3 {
+            color: #f0f0f0;
+        }
+
+        body[data-theme="dark"] .read-more {
+            color: #aaaaaa;
+        }
+
+        body[data-theme="dark"] .essay-view-section {
+            background-color: #1e1e1e;
+            border: 1px solid #333333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        body[data-theme="dark"] .back-to-list {
+            background-color: #444444;
+            color: white;
+            border: 1px solid #444444;
+        }
+
+        body[data-theme="dark"] .back-to-list:hover {
+            background-color: #555555;
+        }
+
+        body[data-theme="dark"] .essay-view-section .references {
+            border-top: 1px solid #333333;
+            background-color: #252525;
+        }
+
+        body[data-theme="dark"] .essay-view-section .references h4 {
+            color: #e0e0e0;
+        }
+
+        body[data-theme="dark"] .essay-image-figure img {
+            border: 1px solid #333333;
+        }
+
+        body[data-theme="dark"] .essay-image-figure figcaption {
+            color: #aaaaaa;
+        }
+
+        body[data-theme="dark"] footer {
+            background-color: #1e1e1e;
+            color: #cccccc;
+        }
+
+        body[data-theme="dark"] .footer-nav a {
+            color: #cccccc;
+        }
+        
+        /* Footer Active Link Style */
+        .footer-nav a:hover,
+        .footer-nav a.active {
+            color: #ffffff;
+            border-bottom: 2px solid #ffffff; 
+        }
+
+        body[data-theme="dark"] .footer-nav a:hover,
+        body[data-theme="dark"] .footer-nav a.active {
+            color: #ffffff; 
+            border-bottom: 2px solid #ffffff; 
+        }
 
     </style>
 </head>
@@ -174,6 +262,7 @@
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
     <header>
         <a href="index.html" class="home-link logo">T A G</a>
         <nav>
@@ -260,13 +349,13 @@
         </div>
     </footer>
     <script>
-    // --- ESSAY DATA (Keep this object) ---
+    // --- ESSAY DATA (All content, now using local image paths) ---
     const essays = {
         frida: {
             title: "Dearly Beloved",
             content: `
                 <figure class="essay-image-figure">
-                    <img src="https://images.unsplash.com/photo-1616766467035-7c0888dd986b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzIyNzh8MHwxfHNlYXJjaHw1fHxmcmlkYSUyMGthaGxvJTIwcGFpbnRpbmd8ZW58MHwwfHx8fDE3MTU0NDc5NDV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Frida Kahlo's 'The Wounded Deer' painting" loading="lazy">
+                    <img src="images/frida_deer.jpg" alt="Frida Kahlo's 'The Wounded Deer' painting" loading="lazy">
                     <figcaption>A representation of Frida Kahlo's 'The Wounded Deer'.</figcaption>
                 </figure>
                 <p>"Kahlo's supposed shyness and 'naïve' childlike nature were attributed to both her personality and her artistic style" (Ankori, 2024, p. [13]). Magdalena Frida Carmen Kahlo was born on July 6, 1907, at 8:30 am to Guillermo Kahlo and Matilde Calderon. Like many things about Frida, even her birth date was a mystery. She claimed to be born in 1910, a symbolic connection to the start of the Mexican Revolution. Her lack of conformity permeated her historical record.</p>
@@ -310,7 +399,7 @@
             title: "It's the Mud",
             content: `
                 <figure class="essay-image-figure">
-                    <img src="https://images.unsplash.com/photo-1549488346-cb271810c3b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzIyNzh8MHwxfHNlYXJjaHwzfHxicmF6aWxpYW4lMjBib3NzYSUyMG5vdmElMjBndWl0YXJ8ZW5mDB8MHx8fDE3MTU0NDc5NzN8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Bossa Nova guitarist playing on a beach" loading="lazy">
+                    <img src="images/bossa_nova.jpg" alt="Bossa Nova guitarist playing on a beach" loading="lazy">
                     <figcaption>A relaxed Bossa Nova scene, evoking the genre's origins.</figcaption>
                 </figure>
                 <p>"Brazil's best-known form of music is the samba, the drum-heavy, rhythmically intricate and danceable genre that powers Carnival" (Smithsonian, 2019). Samba developed a "new style" of music called Bossa Nova. During a time of revitalization of Brazilian culture, Bossa Nova was the hallmark of the post-war musical renaissance. The genre was most popular amongst the emerging middle class and the wealthy. Mixing classical Brazilian percussion with qualities Of American pop and Jazz lamented this genre's diverse and sophisticated vibe. Flutes, saxophones, and breathy vocals create a sense of intimacy with its audience. Prominent Bossa Nova Musicians include Antônio Carlos Jobim, João Gilberto, and Vinícius de Morãe.</p>
@@ -319,7 +408,7 @@
 
                 <p>In the United States, it became popularized by saxophonist Stan Getz and guitarist Charlie Bryd. Bryd heard of the style on a State-Sponsored tour of South America (JSTOR, 2023). Together, they recorded the hit 1962 album Jazz Samba to a warm reception from American jazz aficionados. Conversely, the phenomenon of America's Rock and Roll music and its accompanying dances was nonconforming to the male-led momentum of Bossa Nova dances. The Bossa Nova "craze" became so apparent in the early 60's that it was often used to indicate the sophistication of desserts, articles of clothing, and even haircuts. The apex of the Bossa Nova "craze" coincided with the Americanization of the classic hit "The Girl From Ipanema." Chico Buarque, an internationally acclaimed Brazilian musician, would illustrate the allure of Bossa Nova. "The optimism of the era that Buarque described is evident in the songs' lyrics, which casually describe the musicians' environment: beaches, flowers, blue skies, and beautiful women" (Brown University Library, n.d).</p>
 
-                <p>The presidency of Juscelino Kubitschek marked a stark change from the nationalist-oriented rule of Getúlio Vargas. Kubitschek's reign brought the development and expansion of Brazil's middle-class purchasing power. The music industry became diversified because of this liberation, thus allowing the novel genre to emerge. "Brazil, as we know it today, could not exist without Africa" (Afro Pop, n.d). Between the 1530s and 1850s, an estimated 3.6 million Africans were brought as captives to Brazil by the Portuguese. This importation of people created the largest population of Africans outside of Africa itself. Notably, the African cultures of the Dahomey and Yoruba dominated the coastal regions of Brazil, bringing with them the roots of samba. During the reign of the Portuguese rule, Indigenous Peoples, Europeans, and Africans intermingled. Creating a melting pot of cultures, mixed races, and a new formation of Brazilian heritage. This mixture, however, was not without turmoil. Racial injustices are part of Brazilian culture, as is its diversity. The slave plantations that many Africans called home were transformed into the modern-day favelas, ghettos that are predominantly filled with Afro-Brazillians. Bosa Nova was the first Brazilian genre that reverberated onto the global stage. The genre reflects Brazil's diverse cultures and bridges each unique cultural expression it comprises. However, Bossa Nova was not enjoyed equally by all. "While songs about beautiful women and beautiful beaches did not die out, the increasingly dire situation of the country made the youth, key cultural consumers and producers, long for something more" (Brown University, n.d). The young are the most affected by political affairs, partly because they cannot represent themselves politically and often have less inherent real value in society. As Bossa Nova is a mesmerizing genre, it does not encapsulate the struggles of the poor and the young. Many of them are the descendants of the Africans who were taken away from their own homes.</p>
+                <p>The presidency of Juscelino Kubitschek marked a stark change from the nationalist-oriented rule of Getúlio Vargas. Kubitschek's reign brought the development and expansion of Brazil's middle-class purchasing power. The music industry became diversified because of this liberation, thus allowing the novel genre to emerge. "Brazil, as we know it today, could not exist without Africa" (Afro Pop, n.d). Between the 1530s and 1850s, an estimated 3.6 million Africans were brought as captives to Brazil by the Portuguese. This importation of people created the largest population of Africans outside of Africa itself. Notably, the African cultures of the Dahomey and Yoruba dominated the coastal regions of Brazil, bringing with them the roots of samba. During the reign of the Portuguese rule, Indigenous Peoples, Europeans, and Africans intermingled. Creating a melting pot of cultures, mixed races, and a new formation of Brazilian heritage. This mixture, however, was not without turmoil. Racial injustices are part of Brazilian culture, as is its diversity. The slave plantations that many Africans called home were transformed into the modern-day favelas, ghettos that are predominantly filled with Afro-Brazillians. Bossa Nova was the first Brazilian genre that reverberated onto the global stage. The genre reflects Brazil's diverse cultures and bridges each unique cultural expression it comprises. However, Bossa Nova was not enjoyed equally by all. "While songs about beautiful women and beautiful beaches did not die out, the increasingly dire situation of the country made the youth, key cultural consumers and producers, long for something more" (Brown University, n.d). The young are the most affected by political affairs, partly because they cannot represent themselves politically and often have less inherent real value in society. As Bossa Nova is a mesmerizing genre, it does not encapsulate the struggles of the poor and the young. Many of them are the descendants of the Africans who were taken away from their own homes.</p>
 
                 <p>'Águas de Março' was created in May 1972 by Antônio Carlos Jobim and Elis Regina. The song laments the cyclic nature of life, infused with whimsical depictions of day-to-day life in Brazil. "And the riverbank talks of the waters of March, It's the end of the strain, The joy in your heart" (águas de março, n.d). Infamously, Brazil's spring is quite wet; águas de março illustrates the almost comical degree to which it rains in the spring. Jobim wrote this song on a trip to his family's rancho (Connect Brazil, n.d). He was bombarded with steadfast rainstorms, which washed away the roads and left a muddy layer. The hope and promise of a new life vindicate this dilemma. Though it may be miserable during this period of terrible rainfall, the rain washes more than mud; it cleanses people of their sorrows.</p>
 
@@ -339,7 +428,7 @@
             title: "Nicaragua's Revolution",
             content: `
                 <figure class="essay-image-figure">
-                    <img src="https://images.unsplash.com/photo-1621245847376-b9b5f3d79a2f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzIyNzh8MHwxfHNlYXJjaHwzfHxuZWVkeSUyMHRvd24lMjBpbiUyMG5pY2FyYWd1YXxlbnwwfDB8fHwxNzE1NDQ4MDA1fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Devastated town in Nicaragua after a natural disaster" loading="lazy">
+                    <img src="images/nicaragua_ruins.jpg" alt="Devastated town in Nicaragua after a natural disaster" loading="lazy">
                     <figcaption>A scene depicting the aftermath of a natural disaster in Nicaragua.</figcaption>
                 </figure>
                 <p>Nicaragua is in Central America; to the north lies Honduras, and the south is Costa Rica. Nicaragua has extensive coastlines to the east and west; these coastlines give way to the Pacific and Caribbean Seas, respectively. Despite being a smaller, developing country, Nicaragua suffers from extreme, volatile weather patterns. Volcanic, seismic, and tropical natural disasters plague the environment and its inhabitants. An equally devastating disaster lies in the political system of Nicaragua, A system with a violent political climate of oppression, war, and corruption.</p>
@@ -371,7 +460,7 @@
             title: "Parks and Recreation",
             content: `
                 <figure class="essay-image-figure">
-                    <img src="https://images.unsplash.com/photo-1510414842594-a61c65b5ae22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzIyNzh8MHwxfHNlYXJjaHw2fHxwdWJsaWMlMjBwYXJrfGVufDB8MHx8fDE3MTU0NDc4Nzl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Lush green public park with people relaxing" loading="lazy">
+                    <img src="images/public_park.jpg" alt="Lush green public park with people relaxing" loading="lazy">
                     <figcaption>A vibrant public park offering respite and community space.</figcaption>
                 </figure>
                 <p>Creating and integrating parks in communities is a simple yet effective way of increasing the value of a neighborhood and the well-being of its residents, as well as counteracting the adverse effects of modern city sprawl. Parks offer a third place for people to interact with one another, away from work, school, and home. On top of parks being a logistical benefit in a multitude of different arenas, they also simply are breath-giving and allow people to connect back to their roots, time to decompress, and time to find liberation in the Impermanence of daily life. This essay will touch on the benefits and disadvantages of public parks and attempt to convey the importance of such consideration to citizens, governing bodies, and city planners to give the proper information and context for the public to form and conclude their thoughts and opinions. Public parks can be essential in promoting community well-being, environmental protection, and habitat, with equity and proper planning in mind.</p>
@@ -396,50 +485,50 @@
             `
         },
         burden: {
-        title: "The Burden to Bear",
-        content: `
-            <figure class="essay-image-figure">
-                <img src="https://images.unsplash.com/photo-1490220268508-3162781b0a70?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NzIyNzh8MHwxfHNlYXJjaHwxfHxhYmFuZG9uZWRfcnVpbnN8ZW5mDB8MHx8fDE3MTU0NDgxMzl8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Ruins of an ancient building, evoking a sense of burden and history" loading="lazy">
-                <figcaption>Ancient ruins symbolize the heavy burden of history and inherited destiny.</figcaption>
-            </figure>
-            <p>A comparative analysis of Naguib Mahfouz's "Palace Walk" and Timothy O'Sullivan's "A Harvest of Death," exploring themes of destiny, freedom, and the human condition.</p>
-            <p>Naguib Mahfouz (Cairo, 1911—2006) was an Egyptian author, playwright, and Nobel Prize laureate. His work illustrates the complexity of human relationships, thoughts on destiny, and reflections on social contracts (Library of Congress). In the passage "Excerpt from Palace Walk" (Penguin Random House), Mahfouz illustrates the fictitious life of an Egyptian woman. In this tale, we first learn of a wife's daily routine and the gravity of her husband's authority. "Habit woke her at this hour. It was an old habit she had developed when young, and it had stayed with her as she matured." The predetermined nature of the woman's life is lamented in this quote. Destiny is the glue that ties her soul to this plane of the living. However, there is already an inception of thought that this arrangement is not without compromises.</p>
-            
-            <p>Mahfouz emphasizes the helplessness and isolation of the wife's current circumstances. Whisked away to a marriage at the age of fourteen, she knows she has little choice in a world built by and for men. Using the house's mashrabiya (Abiya), the isolated wife can glimpse the world around her, yet the wife feels isolated. Only through the text of the Qur'an does she come to a catharsis of her experience. "Socially, the role of the mashrabiya evolved into a product for gender segregation, home seclusion, and a veiling norm regulator. Nevertheless, it also mediates the architecture and interior experiences, allowing female occupants to observe exterior life without being observed themselves" (Abiya, 2024). This motif of predetermination is ever-present in this text. Mahfouz brings to attention the archaic societal code of the Egyptian and larger Arab world, in which adherence to doctrine is paramount.</p>
-            
-            <p>The Cairo Trilogy takes place over thirty years (Habib, 2022). "From World War I to eight years before the overthrow of King Farouk in 1952." Mahfouz utilizes real street names from the Al-Kamaliyya district of Cairo. The tensions were high during these thirty years in Egypt as Great Britain's interests and those of Egyptian citizens clashed.</p>
-            
-            <p>Naguib Mahfouz was born in Cairo, Egypt, in 1911 (The Nobel Prize). Mahfouz began writing at seventeen, and he authored several novels before the Egyptian Revolution of July 1952. Mahfouz's fame would not become apparent until his Cairo Trilogy, of which the excerpt from Palace Walk is a part. As Mahfouz's career evolved, he expressed his more sensitive ideas via innuendo and imaginative wordplay. As aforementioned, Mahfouz was also a screenwriter, with half of his work being adapted into films.</p>
-            
-            <p>"When it comes to our habits, we are completely enslaved" (The Tibetan Book of Living and Dying). The picture entitled A Harvest of Death is a bleak yet poignant reminder of the horrors of war. In the image's foreground is a field of lifeless soldiers, with the living in the background. A Harvest of Death is attributed to Timothy H. O'Sullivan and Alexander Gardner. Due to the primitive capabilities of photography, the framing of the composition, and the destructive nature of the Battle of Gettysburg, no soldier can easily be identified. In a sea of suffering, a million drown.</p>
-            
-            <p>The primitive style of the work is also apparent not just in its direction and subject matter but also in its color palette. Instead, it lacks color, as the picture is monochromatic. This style was not an intentional choice; however, it does create a sense of distance, reverence for those lost, and a state of objectivity depicting the nightmare we call war. These men battled for causes more significant than any single individual. Countless may have wanted to give their lives to their respective causes, yet this work begs questions of destiny.</p>
-            
-            <p>Nothing is ever promised tomorrow, yet we must act as though we will continue in the morning—foolishly or due to our insatiable aversion to impermanence. Life flows like a stream through a field, unknowingly awaiting a bloodbath at our end. The soldiers of Gettysburg fought for freedom, but thousands (Guelzo, 2013) would never live to enjoy the fruits of their labor. From the two days of "fistful" (O'Sullivan) rains, it seemed the earth was anxious to be emancipated from such a horrific event.</p>
-            
-            <p>While these works are of different eras and culturally distinct, both offer readers an insight into the past. They showcase pivotal moments of each respected society. From O'Sullivan, the most crucial battle of the United States Civil War, and Mahfouz, Egypt in the years after World War One, "Egypt was in turmoil with its kin battling all around to accomplish their nation's freedom" (Reality in Literature, 2021). The works are equally realistic; The Harvest of Death is a candid look into the atrocities of war, whilst The Palace Walk is Mahfouz's attempt to "bring realism into the mainstream of Arabic prose fiction" (Reality in Literature, 2021). Furthermore, these works are praised for their perspectives. Mahfouz is "The world's best-known and most translated Arab novelist" (Reality in Literature, 2021). O'Sullivan "relies on conventions of landscape painting such as one point and atmospheric perspective, along with a dramatic, layered composition leading the eye from foreground to background, to draw in the viewer and convey a powerful, unforgettable message about this historic event" (Smarthistory, n,d).</p>
-            
-            <p>The Harvest of Death differs from the Palace Walk as it is not the content that has retained its importance throughout history. Instead, it is what the work makes people internalize about their poignant existence. The Palace Walk is a vicarious adventure into a fictitious Egyptian family decorated with real-life locations and heavily influenced by realism. The photo at the fields of Gettysburg of the world entirely, yet many questions remain. How did these men die, who were they as people, what became of their families, and what were their ultimate moments? "In comparison to precedents of military victory scenes, A Harvest of Death is unusual. It focuses on the horrors of death on the battlefield rather than a decisive moment of heroism or victory during battle" (Smarthistory, n.d). Rather than embedding the creators' perspective as the Palace Walk does, The Harvest of Death is self-evident, needing no context or guidance to understand its themes truly.</p>
-            
-            <p>In closing, both works touch on themes of destiny and freedom—Mahfouz on the fickle nature of an Egyptian wife and O'Sullivan on the merits and shortcomings of war. In many ways, both show the war all humans fight for: the erosion of self we allow through the regression of urges, wants, and desires. The destiny of life and death are the same in the end. The way we live is by the same means in which we die. What we allow to consume us in life will, in turn, consume us in death—one woman's quest for liberation versus that of 50,000 men. Anonymity does not devalue the importance of our innate desire for freedom. After all, humans are born into this world with no name; thus, we shall leave it with none. Only the scars of our journey shall remain.</p>
+            title: "The Burden to Bear",
+            content: `
+                <figure class="essay-image-figure">
+                    <img src="images/ancient_ruins.jpg" alt="Ruins of an ancient building, evoking a sense of burden and history" loading="lazy">
+                    <figcaption>Ancient ruins symbolize the heavy burden of history and inherited destiny.</figcaption>
+                </figure>
+                <p>A comparative analysis of Naguib Mahfouz's "Palace Walk" and Timothy O'Sullivan's "A Harvest of Death," exploring themes of destiny, freedom, and the human condition.</p>
+                <p>Naguib Mahfouz (Cairo, 1911—2006) was an Egyptian author, playwright, and Nobel Prize laureate. His work illustrates the complexity of human relationships, thoughts on destiny, and reflections on social contracts (Library of Congress). In the passage "Excerpt from Palace Walk" (Penguin Random House), Mahfouz illustrates the fictitious life of an Egyptian woman. In this tale, we first learn of a wife's daily routine and the gravity of her husband's authority. "Habit woke her at this hour. It was an old habit she had developed when young, and it had stayed with her as she matured." The predetermined nature of the woman's life is lamented in this quote. Destiny is the glue that ties her soul to this plane of the living. However, there is already an inception of thought that this arrangement is not without compromises.</p>
+                
+                <p>Mahfouz emphasizes the helplessness and isolation of the wife's current circumstances. Whisked away to a marriage at the age of fourteen, she knows she has little choice in a world built by and for men. Using the house's mashrabiya (Abiya), the isolated wife can glimpse the world around her, yet the wife feels isolated. Only through the text of the Qur'an does she come to a catharsis of her experience. "Socially, the role of the mashrabiya evolved into a product for gender segregation, home seclusion, and a veiling norm regulator. Nevertheless, it also mediates the architecture and interior experiences, allowing female occupants to observe exterior life without being observed themselves" (Abiya, 2024). This motif of predetermination is ever-present in this text. Mahfouz brings to attention the archaic societal code of the Egyptian and larger Arab world, in which adherence to doctrine is paramount.</p>
+                
+                <p>The Cairo Trilogy takes place over thirty years (Habib, 2022). "From World War I to eight years before the overthrow of King Farouk in 1952." Mahfouz utilizes real street names from the Al-Kamaliyya district of Cairo. The tensions were high during these thirty years in Egypt as Great Britain's interests and those of Egyptian citizens clashed.</p>
+                
+                <p>Naguib Mahfouz was born in Cairo, Egypt, in 1911 (The Nobel Prize). Mahfouz began writing at seventeen, and he authored several novels before the Egyptian Revolution of July 1952. Mahfouz's fame would not become apparent until his Cairo Trilogy, of which the excerpt from Palace Walk is a part. As Mahfouz's career evolved, he expressed his more sensitive ideas via innuendo and imaginative wordplay. As aforementioned, Mahfouz was also a screenwriter, with half of his work being adapted into films.</p>
+                
+                <p>"When it comes to our habits, we are completely enslaved" (The Tibetan Book of Living and Dying). The picture entitled A Harvest of Death is a bleak yet poignant reminder of the horrors of war. In the image's foreground is a field of lifeless soldiers, with the living in the background. A Harvest of Death is attributed to Timothy H. O'Sullivan and Alexander Gardner. Due to the primitive capabilities of photography, the framing of the composition, and the destructive nature of the Battle of Gettysburg, no soldier can easily be identified. In a sea of suffering, a million drown.</p>
+                
+                <p>The primitive style of the work is also apparent not just in its direction and subject matter but also in its color palette. Instead, it lacks color, as the picture is monochromatic. This style was not an intentional choice; however, it does create a sense of distance, reverence for those lost, and a state of objectivity depicting the nightmare we call war. These men battled for causes more significant than any single individual. Countless may have wanted to give their lives to their respective causes, yet this work begs questions of destiny.</p>
+                
+                <p>Nothing is ever promised tomorrow, yet we must act as though we will continue in the morning—foolishly or due to our insatiable aversion to impermanence. Life flows like a stream through a field, unknowingly awaiting a bloodbath at our end. The soldiers of Gettysburg fought for freedom, but thousands (Guelzo, 2013) would never live to enjoy the fruits of their labor. From the two days of "fistful" (O'Sullivan) rains, it seemed the earth was anxious to be emancipated from such a horrific event.</p>
+                
+                <p>While these works are of different eras and culturally distinct, both offer readers an insight into the past. They showcase pivotal moments of each respected society. From O'Sullivan, the most crucial battle of the United States Civil War, and Mahfouz, Egypt in the years after World War One, "Egypt was in turmoil with its kin battling all around to accomplish their nation's freedom" (Reality in Literature, 2021). The works are equally realistic; The Harvest of Death is a candid look into the atrocities of war, whilst The Palace Walk is Mahfouz's attempt to "bring realism into the mainstream of Arabic prose fiction" (Reality in Literature, 2021). Furthermore, these works are praised for their perspectives. Mahfouz is "The world's best-known and most translated Arab novelist" (Reality in Literature, 2021). O'Sullivan "relies on conventions of landscape painting such as one point and atmospheric perspective, along with a dramatic, layered composition leading the eye from foreground to background, to draw in the viewer and convey a powerful, unforgettable message about this historic event" (Smarthistory, n,d).</p>
+                
+                <p>The Harvest of Death differs from the Palace Walk as it is not the content that has retained its importance throughout history. Instead, it is what the work makes people internalize about their poignant existence. The Palace Walk is a vicarious adventure into a fictitious Egyptian family decorated with real-life locations and heavily influenced by realism. The photo at the fields of Gettysburg of the world entirely, yet many questions remain. How did these men die, who were they as people, what became of their families, and what were their ultimate moments? "In comparison to precedents of military victory scenes, A Harvest of Death is unusual. It focuses on the horrors of death on the battlefield rather than a decisive moment of heroism or victory during battle" (Smarthistory, n.d). Rather than embedding the creators' perspective as the Palace Walk does, The Harvest of Death is self-evident, needing no context or guidance to understand its themes truly.</p>
+                
+                <p>In closing, both works touch on themes of destiny and freedom—Mahfouz on the fickle nature of an Egyptian wife and O'Sullivan on the merits and shortcomings of war. In many ways, both show the war all humans fight for: the erosion of self we allow through the regression of urges, wants, and desires. The destiny of life and death are the same in the end. The way we live is by the same means in which we die. What we allow to consume us in life will, in turn, consume us in death—one woman's quest for liberation versus that of 50,000 men. Anonymity does not devalue the importance of our innate desire for freedom. After all, humans are born into this world with no name; thus, we shall leave it with none. Only the scars of our journey shall remain.</p>
 
-            <div class="references">
-                <h4>References</h4>
-                <p>Library of Congress. "Egyptian Author Naguib Mahfouz Subject of May 14 Symposium." Last modified May 6, 2013.</p>
-                <p>Penguin Random House. "Palace Walk by Naguib Mahfouz: Excerpt."</p>
-                <p>The Nobel Prize. "Naguib Mahfouz - Biographical." NobelPrize.org.</p>
-                <p>Abiya "Mashrabiya: A Product for Gender Segregation." Accessed December 13, 2024.</p>
-                <p>Habib, M.A.R. "Analysis of Naguib Mahfouz's The Cairo Trilogy." Literariness.org, October 9, 2022.</p>
-                <p>Rinpoche, Sogyal. The Tibetan Book of Living and Dying. New York: HarperCollins, 1992.</p>
-                <p>Guelzo, Allen C. "Gettysburg: The Last Invasion." Gettysburg College Faculty Publications, no. 121, 2013.</p>
-                <p>O'Sullivan, Timothy H. A Harvest of Death, Gettysburg, Pennsylvania. July 1863. The Metropolitan Museum of Art.</p>
-                <p>Journal of Arabic and Religious Texts. 2021. The Cairo Trilogy: An Analysis of Social Reality in Literature. (Cited as "Reality in Literature, 2021")</p>
-                <p>Smarthistory. n.d. Photographing the Battle of Gettysburg: Timothy O'Sullivan's "A Harvest of Death."</p>
-            </div>
-        `
-    }
+                <div class="references">
+                    <h4>References</h4>
+                    <p>Library of Congress. "Egyptian Author Naguib Mahfouz Subject of May 14 Symposium." Last modified May 6, 2013.</p>
+                    <p>Penguin Random House. "Palace Walk by Naguib Mahfouz: Excerpt."</p>
+                    <p>The Nobel Prize. "Naguib Mahfouz - Biographical." NobelPrize.org.</p>
+                    <p>Abiya "Mashrabiya: A Product for Gender Segregation." Accessed December 13, 2024.</p>
+                    <p>Habib, M.A.R. "Analysis of Naguib Mahfouz's The Cairo Trilogy." Literariness.org, October 9, 2022.</p>
+                    <p>Rinpoche, Sogyal. The Tibetan Book of Living and Dying. New York: HarperCollins, 1992.</p>
+                    <p>Guelzo, Allen C. "Gettysburg: The Last Invasion." Gettysburg College Faculty Publications, no. 121, 2013.</p>
+                    <p>O'Sullivan, Timothy H. A Harvest of Death, Gettysburg, Pennsylvania. July 1863. The Metropolitan Museum of Art.</p>
+                    <p>Journal of Arabic and Religious Texts. 2021. The Cairo Trilogy: An Analysis of Social Reality in Literature. (Cited as "Reality in Literature, 2021")</p>
+                    <p>Smarthistory. n.d. Photographing the Battle of Gettysburg: Timothy O'Sullivan's "A Harvest of Death."</p>
+                </div>
+            `
+        }
     };
-
+    
     const mainView = document.getElementById('main-view');
     const essayView = document.getElementById('essay-view');
 
